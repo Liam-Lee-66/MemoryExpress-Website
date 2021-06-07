@@ -1,0 +1,305 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: aqua;
+}
+
+body {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d1f094), to(white));
+  background-image: linear-gradient(#d1f094, white);
+  background-repeat: no-repeat;
+}
+
+/*importing content from "header.scss"*/
+* {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.TopHeader {
+  background-color: #333333;
+  color: whitesmoke;
+}
+
+.TopHeader .Account-info li {
+  display: inline-block;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+.TopHeader .Account-info .login-links {
+  color: #fcf55f;
+}
+
+.TopHeader .Account-info .login-links:hover {
+  color: #4fb949;
+}
+
+.TopHeader .Account-info button {
+  border: none;
+  background-color: #fcf55f;
+}
+
+.TopHeader .Account-info button:hover {
+  cursor: pointer;
+  background-color: #4fb949;
+}
+
+/*
+    Side nav from W3schools: https://www.w3schools.com/howto/howto_js_sidenav.asp
+*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: whitesmoke;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #4fb949;
+}
+
+.sidenav li {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: whitesmoke;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+header .centerheader {
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  display: block;
+  margin: auto;
+}
+
+header .centerheader button {
+  padding: 15px;
+  background-color: none;
+}
+
+header nav {
+  /*Nav Dropdown menu from W3schools: https://www.w3schools.com/css/css_dropdowns.asp*/
+  overflow: hidden;
+  background-color: #333333;
+  width: 100%;
+  /* 
+            should be applying to the nav bar buttons itself, but somehow effects the dropdown options.
+            assuming it's because there are no <a href=""> in the nav bar.
+    
+            Confirmed: This code is for the <a href=""> in the nav bar. It is no longer needed for me, but I'll leave it be.
+        */
+  /* 
+            Apparently if I apply "border: 2px solid $gray-black" the nav bar elements move.
+            The possible reason of this issue is possibly increase in size due to border. 
+        */
+}
+
+header nav a {
+  float: left;
+  font-size: 16px;
+  color: whitesmoke;
+  text-align: center;
+  padding: 14px 16px;
+  padding-bottom: 5px;
+  text-decoration: none;
+}
+
+header nav .dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+header nav .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+}
+
+header nav .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: whitesmoke;
+  min-width: 160px;
+  z-index: 1;
+}
+
+header nav .dropdown-content a {
+  float: none;
+  color: black;
+  padding: none;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+header nav .dropdown-content a:hover {
+  background-color: darkcyan;
+  border: none;
+}
+
+header nav a:hover,
+header nav .dropdown:hover .dropbtn {
+  background-color: #fcf55f;
+  color: #333333;
+}
+
+header nav .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+main .CenterContent {
+  background: linear-gradient(120deg, #b0d369 60%, #fcf55f 60%);
+  border: 10px;
+  border-color: #333333;
+  width: 70%;
+  height: 100%;
+  margin: auto;
+  color: whitesmoke;
+  /*Slide show from W3schools: https://www.w3schools.com/howto/howto_js_slideshow.asp */
+  /* Slideshow container */
+  /* Hide the images by default */
+  /* Next & previous buttons */
+  /* Position the "next button" to the right */
+  /* On hover, add a black background color with a little bit see-through */
+  /* The dots/bullets/indicators */
+  /* Fading animation */
+}
+
+main .CenterContent * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main .CenterContent .slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+main .CenterContent .mySlides {
+  display: none;
+}
+
+main .CenterContent .prev,
+main .CenterContent .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+main .CenterContent .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+main .CenterContent .prev:hover,
+main .CenterContent .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+main .CenterContent .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+main .CenterContent .active,
+main .CenterContent .dot:hover {
+  background-color: #717171;
+}
+
+main .CenterContent .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+footer {
+  width: 100%;
+  background-color: #333333;
+  color: whitesmoke;
+}
+
+footer li {
+  color: #fcf55f;
+}
+
+footer li:hover {
+  color: #4fb949;
+}
