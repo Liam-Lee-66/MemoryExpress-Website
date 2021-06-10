@@ -1,0 +1,283 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Memory Express Inc. - Computer Parts, Laptop Computers & Electronics in Canada - Memory Express Inc.</title>
+    <link rel="stylesheet" type="text/css" href="Style/main-style.css">
+
+    <style>
+        .decorLine {
+            background-color: rgb(79, 185, 73);
+            width: 100%;
+            height: 5px;
+        }
+
+        h1 {
+            font-family: serif;
+            color: black;
+            text-align: center;
+        }
+
+        table {
+            font-family: sans-serif;
+            border-collapse: collapse;
+            width: 95%;
+            margin: auto;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            font-weight: bolder;
+        }
+
+        tr:nth-child(odd) {
+            background-color: whitesmoke;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="TopHeader">
+        <!--The top part of website stating: account information, items in cart and announcements-->
+        <div class="Account-Info">
+            <!--Account Info-->
+            <li style="padding-left: 25px;">Welcome
+                <!--User's name after login-->
+            </li>
+            <li>|</li>
+            <li><a href="" class="login-links" title="Unavailable">Log-In</a></li>
+            <li>-</li>
+            <li><a href="" class="login-links" title="Unavailable">Sign-Up</a></li>
+            <li>|</li>
+
+            <!--Announcement info-->
+            <!--Button need side menu effect-->
+            <li>Announcements</li>
+            <button onclick="openNav()">&#128489;</button>
+            <li>|</li>
+            <li><a href="" class="login-links" title="Unavailable">System Configurator</a></li>
+            <li>|</li>
+            <li><a href="" class="login-links" title="Unavailable">New Arrivals</a></li>
+
+            <!--Cart items-->
+            <li><a href="" class="login-links" title="Unavailable" style="text-align: right;">items</a></li>
+        </div>
+        <!--Simple line for decor-->
+        <div class="decorLine"></div>
+    </div>
+
+
+    <!--Side menu for announcements/notifications-->
+    <!--Side nav from W3schools: https://www.w3schools.com/howto/howto_js_sidenav.asp-->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <!--Add announcements or notifications here below-->
+        <a href="" title="Unavailable">Sample Link</a>
+        <br>
+        <li>Sample Text</li>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        } 
+    </script>
+
+    <br>
+
+    <header>
+        <!--Header that contains logo and search bar-->
+        <div class="centerheader">
+            <img src="Img/MX-Logo.png" width="20%;" alt="Memory Express Logo">
+            <a href=""><button>Store Locatitons</button></a>
+            <a href=""><button>Contact Us</button></a>
+            <a href=""><button>Tech Zone</button></a>
+            <a href=""><button>Corporate Sales</button></a>
+
+            <!--(Incomplete) How Searchbar Should look-->
+            <div class="searchbar-design">
+                <div class="input">input</div>
+                <div class="enter">button</div>
+            </div>
+        </div>
+
+        <br>
+
+        <!--Simple line for decor-->
+        <div class="decorLine"></div>
+        <!--Nav Bar-->
+        <nav>
+            <!--Nav Dropdown bar from W3schools: https://www.w3schools.com/css/css_dropdowns.asp-->
+            <!--Home button-->
+            <a href="index.html">&#8962;</a>
+
+            <!--Dropdown menus-->
+            <div class="dropdown">
+                <button class="dropbtn">Computer Hardware</button>
+                <div class="dropdown-content">
+                    <a href="" title="Unavailable">Computer Parts</a>
+                    <a href="" title="Unavailable">Computer Peripherals</a>
+                    <a href="" title="Unavailable">Display Devices</a>
+                    <a href="" title="Unavailable">Storage Media</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Computer Systems</button>
+                <div class="dropdown-content">
+                    <a href="" title="Unavailable">Desktop Computers</a>
+                    <a href="" title="Unavailable">Laptops</a>
+                    <a href="" title="Unavailable">Tablet & Mobile Devices</a>
+                    <a href="" title="Unavailable">Server Systems</a>
+                    <a href="" title="Unavailable">Single Board Computers</a>
+                    <a href="" title="Unavailable">Custon System Configurator</a>
+
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Software & Gaming</button>
+                <div class="dropdown-content">
+                    <a href="" title="Unavailable">Software</a>
+                    <a href="" title="Unavailable">Gaming</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Networking</button>
+                <div class="dropdown-content">
+                    <a href="" title="Unavailable">Wired Networking</a>
+                    <a href="" title="Unavailable">Wireless Networking</a>
+                    <a href="" title="Unavailable">Power Line Networking</a>
+                    <a href="" title="Unavailable">Network Attatcked Storage (NAS)</a>
+                    <a href="" title="Unavailable">Bluetooth Adapters</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">TVs & Home Theater</button>
+                <div class="dropdown-content">
+                    <a href="" title="Unavailable">Televisions</a>
+                    <a href="" title="Unavailable">Audio</a>
+                    <a href="" title="Unavailable">Video Output Devices</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Cameras & Camcorders</button>
+                <div class="dropdown-content">
+                    <a href="" title="Unavailable">Digital Cameras</a>
+                    <a href="" title="Unavailable">Film Cameras</a>
+                    <a href="" title="Unavailable">Camcorders</a>
+                    <a href="" title="Unavailable">Surveillance</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">More</button>
+                <div class="dropdown-content">
+                    <a href="" title="Unavailable">Accessories</a>
+                    <a href="" title="Unavailable">Cables & Adapters</a>
+                    <a href="" title="Unavailable">Telephones</a>
+                    <a href="" title="Unavailable">Toys & Gadgets</a>
+                    <a href="" title="Unavailable">Home & Office</a>
+                    <a href="" title="Unavailable">Food & Drinks</a>
+                    <a href="" title="Unavailable">Gift Cards</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <!--Image header-->
+        <img src="Img/StoreLocation-header.svg" alt="Image as header">
+
+        <br>
+        <br>
+        <br>
+
+        <!--Store location table-->
+        <!--Alberta Locations-->
+        <table>
+            <tr>
+                <th>Province</th>
+                <th>Address</th>
+                <th>Store Hours</th>
+            </tr>
+            <tr>
+                <td>Calgary North East</td>
+                <td>3305 - 32nd Street NE <br>Calgary, AB T1Y 5X7<br>Phone: 403-313-8883</td>
+                <td>Mon-Fri: 10AM - 8PM<br>Sat: 10AM - 6PM<br>Sun: 11AM - 6PM<br>Holiday: 11AM - 6PM</td>
+            </tr>
+            <tr>
+                <td>Calgary North West</td>
+                <td>#167 - 5005 Dalhousie Dr. NW (Dalhousie Station)<br>Calgary, AB T3A 5R8<br>Phone: 403-450-7360
+                </td>
+                <td>Mon-Fri: 11AM - 8PM<br>Sat: 10AM - 6PM<br>Sun: 11AM - 6PM<br>Holiday: 11AM - 6PM</td>
+            </tr>
+            <tr>
+                <td>Calgary South East</td>
+                <td>120 - 58Ave SE<br>Calgary, AB T2H 0N7<br>Phone: 403-253-5676</td>
+                <td>Mon-Fri: 11AM - 7PM<br>Sat: 10AM - 6PM<br>Sun: 11AM - 6PM<br>Holiday: 11AM - 6PM</td>
+            </tr>
+        </table>
+
+    </main>
+
+    <br>
+
+    <!--Simple line for decor-->
+    <div class="decorLine"></div>
+    <footer>
+        <img src="Img/MX_Footer-ME.png" alt="Footer version of Memeory Express logo." style="padding: 10px;">
+
+        <!--Titles-->
+        <h3 class="title1">Information</h3>
+        <h3 class="title2">Policies & Procedures</h3>
+        <h3 class="title3">Tools & Resources</h3>
+
+        <!--Content/Links-->
+        <!--First row-->
+        <a href="" class="link1" title="Unavailable">&#8594; link 1</a>
+        <a href="" class="link1" title="Unavailable">&#8594; link 1</a>
+        <a href="" class="link1" title="Unavailable">&#8594; link 1</a>
+
+        <!--Second Row-->
+        <a href="" class="link2" title="Unavailable">&#8594; link 2</a>
+        <a href="" class="link2" title="Unavailable">&#8594; link 2</a>
+        <a href="" class="link2" title="Unavailable">&#8594; link 2</a>
+
+        <!--Third Row-->
+        <a href="" class="link3" title="Unavailable">&#8594; link 3</a>
+        <a href="" class="link3" title="Unavailable">&#8594; link 3</a>
+        <a href="" class="link3" title="Unavailable">&#8594; link 3</a>
+
+        <!--Fourth Row-->
+        <a href="" class="link4" title="Unavailable">&#8594; link 4</a>
+        <a href="" class="link4" title="Unavailable">&#8594; link 4</a>
+        <a href="" class="link4" title="Unavailable">&#8594; link 4</a>
+
+        <!--Fifth-->
+        <a href="" class="link5" title="Unavailable">&#8594; link 5</a>
+        <a href="" class="link5" title="Unavailable">&#8594; link 5</a>
+        <a href="" class="link5" title="Unavailable">&#8594; link 5</a>
+
+        <!--last line-->
+        <p class="lastline">Memory Express is not responsible for misprints or errors on product prices or information,
+            for more information please see our Site Terms of Use. ©1996-2021 Memory Express, Inc. All Rights Reserved.
+            - W02</p>
+    </footer>
+</body>
+
+</html>

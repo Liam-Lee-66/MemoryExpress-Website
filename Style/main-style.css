@@ -16,11 +16,8 @@ body {
 }
 
 /*importing content from "header.scss"*/
-* {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
 .TopHeader {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: #333333;
   color: whitesmoke;
 }
@@ -98,17 +95,59 @@ body {
   margin-left: 50px;
 }
 
+header {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 header .centerheader {
-  width: 100%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  display: block;
-  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .centerheader img {
+  width: 20%;
+  margin-right: 20px;
 }
 
 header .centerheader button {
   padding: 15px;
-  background-color: none;
+  margin: 15px;
+  background-color: whitesmoke;
+  color: black;
+}
+
+header .centerheader button:hover {
+  background-color: #d1f094;
+  cursor: pointer;
+}
+
+header .centerheader .searchbar-design {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header .centerheader .searchbar-design .input {
+  background-color: whitesmoke;
+  width: 100%;
+  text-align: center;
+}
+
+header .centerheader .searchbar-design .enter {
+  background-color: #4fb949;
+  width: 20%;
+  text-align: center;
 }
 
 header nav {
@@ -134,7 +173,6 @@ header nav a {
   color: whitesmoke;
   text-align: center;
   padding: 14px 16px;
-  padding-bottom: 5px;
   text-decoration: none;
 }
 
@@ -171,7 +209,7 @@ header nav .dropdown-content a {
 }
 
 header nav .dropdown-content a:hover {
-  background-color: darkcyan;
+  background-color: #d1f094;
   border: none;
 }
 
@@ -185,121 +223,111 @@ header nav .dropdown:hover .dropdown-content {
   display: block;
 }
 
+main {
+  height: 100vh;
+}
+
 main .CenterContent {
   background: linear-gradient(120deg, #b0d369 60%, #fcf55f 60%);
   border: 10px;
   border-color: #333333;
   width: 70%;
-  height: 100%;
+  height: 100vh;
   margin: auto;
   color: whitesmoke;
-  /*Slide show from W3schools: https://www.w3schools.com/howto/howto_js_slideshow.asp */
-  /* Slideshow container */
-  /* Hide the images by default */
-  /* Next & previous buttons */
-  /* Position the "next button" to the right */
-  /* On hover, add a black background color with a little bit see-through */
-  /* The dots/bullets/indicators */
-  /* Fading animation */
 }
 
-main .CenterContent * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-main .CenterContent .slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-main .CenterContent .mySlides {
-  display: none;
-}
-
-main .CenterContent .prev,
-main .CenterContent .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  -webkit-transition: 0.6s ease;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-main .CenterContent .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-main .CenterContent .prev:hover,
-main .CenterContent .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-main .CenterContent .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  -webkit-transition: background-color 0.6s ease;
-  transition: background-color 0.6s ease;
-}
-
-main .CenterContent .active,
-main .CenterContent .dot:hover {
-  background-color: #717171;
-}
-
-main .CenterContent .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
+/*importing content from "footer.scss"*/
 footer {
+  font-family: Arial, Helvetica, sans-serif;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  -ms-grid-rows: auto auto auto auto auto auto auto;
+      grid-template-rows: auto auto auto auto auto auto auto;
   width: 100%;
   background-color: #333333;
   color: whitesmoke;
 }
 
-footer li {
+footer img {
+  width: 60%;
+  margin: 15px;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 6;
+  grid-row: 1 / 7;
+}
+
+footer h3 .title1 {
+  -ms-grid-column: 3;
+  grid-column: 3;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+footer h3 .title2 {
+  -ms-grid-column: 4;
+  grid-column: 4;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+footer h3 .title3 {
+  -ms-grid-column: 5;
+  grid-column: 5;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+footer a {
   color: #fcf55f;
 }
 
-footer li:hover {
+footer a:hover {
   color: #4fb949;
+}
+
+footer a .link1 {
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+footer a .link2 {
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+footer a .link3 {
+  -ms-grid-row: 3;
+  grid-row: 3;
+}
+
+footer a .link4 {
+  -ms-grid-row: 4;
+  grid-row: 4;
+}
+
+footer a .link5 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2/5;
+  -ms-grid-row: 5;
+  grid-row: 5;
+}
+
+footer .lastline {
+  color: white;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  -ms-grid-row: 8;
+  grid-row: 8;
 }

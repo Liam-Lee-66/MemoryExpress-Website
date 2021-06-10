@@ -1,10 +1,5 @@
-@import 'colours';
-
-*{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
-}
-
 .TopHeader {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: $gray-black;
     color: whitesmoke;
     .Account-info {
@@ -77,15 +72,42 @@
 
 
 header{
+    font-family: Arial, Helvetica, sans-serif;
     .centerheader {
-        width: 100%;
-        justify-content: space-around;
-        display: block;
-        margin: auto;
-    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width: 20%;
+            margin-right: 20px;
+        }
+        
         button {
             padding: 15px;
-            background-color: none;
+            margin: 15px;
+            background-color: whitesmoke;
+            color: black;
+            &:hover{
+                background-color: $third-grn;
+                cursor: pointer;
+            }
+        }
+
+        .searchbar-design{
+            width: 30%;
+            display: flex;
+            justify-content: flex-end;
+            .input{
+                background-color: whitesmoke;
+                width: 100%;
+                text-align: center;
+            }
+            .enter{
+                background-color: $first-grn;
+                width: 20%;
+                text-align: center;
+            }
         }
     }
 
@@ -94,7 +116,7 @@ header{
         overflow: hidden;
         background-color: $gray-black;
         width: 100%;
-            
+
         /* 
             should be applying to the nav bar buttons itself, but somehow effects the dropdown options.
             assuming it's because there are no <a href=""> in the nav bar.
@@ -107,7 +129,6 @@ header{
             color: whitesmoke;
             text-align: center;
             padding: 14px 16px;
-            padding-bottom: 5px;
             text-decoration: none;
         }
     
@@ -142,7 +163,7 @@ header{
                 text-align: left;
     
                 &:hover {
-                    background-color: darkcyan;
+                    background-color: $third-grn;
                     border: none;
                 }
             }

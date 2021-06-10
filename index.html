@@ -10,7 +10,177 @@
         .decorLine {
             background-color: rgb(79, 185, 73);
             width: 100%;
+            height: 1px;
+        }
+
+        .decorLine2 {
+            background-color: rgb(79, 185, 73);
+            width: 100%;
             height: 5px;
+        }
+
+
+        /*Slide show from W3schools: https://www.w3schools.com/howto/howto_js_slideshow.asp */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: 0.4;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0.4;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .ServiceInfo {
+            color: whitesmoke;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: 100%;
+        }
+
+        .ServiceInfo h2 {
+            color: #515151;
+        }
+
+        .ServiceInfo a {
+            color: rgb(209, 240, 148);
+        }
+
+        a:hover {
+            color: darkblue;
+        }
+
+        .ServiceInfo .dpt,
+        .dptwli {
+            width: 30%;
+            background-color: rgb(79, 185, 73);
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto auto auto auto;
+            row-gap: 0px;
+            padding: 15px;
+        }
+
+        .dptwli>.title {
+            grid-column: 1 / 3;
+        }
+
+        .dptwli>.para {
+            grid-column: 1 / 4;
+            grid-row: 2;
+        }
+
+        .dptwli>.list1 {
+            grid-column: 1 / 4;
+            grid-row: 3;
+        }
+
+        .dptwli>.list2 {
+            grid-column: 1 / 4;
+            grid-row: 4;
+        }
+
+        .dptwli>.list3 {
+            grid-column: 1 / 4;
+            grid-row: 5;
+        }
+
+        .dpt>.title {
+            grid-column: 1 / 3;
+        }
+
+        .dpt>.para {
+            grid-column: 1 / 4;
+            grid-row: 2 / 3;
+        }
+
+        .dpt,
+        .dptwli>.link {
+            grid-row: 7;
+            grid-column: 1/4;
         }
     </style>
 
@@ -35,12 +205,14 @@
             <li>Announcements</li>
             <button onclick="openNav()">&#128489;</button>
             <li>|</li>
-            <li><a href="" class="login-links" title="Unavailable">System Configurator</a></li>
-            <li>|</li>
-            <li><a href="" class="login-links" title="Unavailable">New Arrivals</a></li>
+            <li><a href="StoreLocations.html" class="login-links">Store Locatitons</a></li>
+            <li>-</li>
+            <li><a href="" class="login-links">Contact Us</a></li>
+            <li>-</li>
+            <li><a href="" class="login-links">Tech Zone</a></li>
+            <li>-</li>
+            <li><a href="" class="login-links">Corporate Sales</a></li>
 
-            <!--Cart items-->
-            <li><a href="" class="login-links" title="Unavailable" style="text-align: right;">items</a></li>
         </div>
         <!--Simple line for decor-->
         <div class="decorLine"></div>
@@ -67,25 +239,7 @@
         } 
     </script>
 
-    <br>
-
     <header>
-        <!--Header that contains logo and search bar-->
-        <div class="centerheader">
-            <a href="index.html" style="background-color:aquamarine;"><img src="img/MX-Logo.png"
-                    alt="Memory Express Logo" style="width: 20%;"></a>
-            <a href=""><button>Store Locatitons</button></a>
-            <a href=""><button>Contact Us</button></a>
-            <a href=""><button>Tech Zone</button></a>
-            <a href=""><button>Corporate Sales</button></a>
-
-            <!--Searchbar needed-->
-        </div>
-
-        <br>
-
-        <!--Simple line for decor-->
-        <div class="decorLine"></div>
         <!--Nav Bar-->
         <nav>
             <!--Nav Dropdown bar from W3schools: https://www.w3schools.com/css/css_dropdowns.asp-->
@@ -161,29 +315,29 @@
                 </div>
             </div>
         </nav>
-        <!--Simple line for decor-->
-        <div class="decorLine"></div>
     </header>
 
     <main>
-        <div class="CenterContent">
 
-            <br>
+        <br>
+        <br>
 
+        <div class="slidebackground">
             <!-- Slideshow container -->
             <div class="slideshow-container">
 
-                <!-- Full-width images with number and caption text -->
+                <!--To Add: Add div, copy & paste, insert image. Don't forget alt text-->
                 <div class="mySlides fade">
-                    <img src="Img/Notice-Geforce30SeriesLaunch-Jun2021.png" style="width:100%;">
+                    <img src="Img/Notice-Geforce30SeriesLaunch-Jun2021.png" style="width:100%;"
+                        alt="3000 series notification.">
                 </div>
 
                 <div class="mySlides fade">
-                    <img src="Img/ReturnsWarrantyUpdate_Banner.png" style="width:100%">
+                    <img src="Img/ReturnsWarrantyUpdate_Banner.png" style="width:100%" alt="Return Warranty Update">
                 </div>
 
                 <div class="mySlides fade">
-                    <img src="Img/MSI-FathersDay2021_Banner.jpg" style="width:100%">
+                    <img src="Img/MSI-FathersDay2021_Banner.jpg" style="width:100%" alt="Fathers Day Banner">
                 </div>
 
                 <!-- Next and previous buttons -->
@@ -194,6 +348,7 @@
 
             <!-- The dots/circles -->
             <div style="text-align:center">
+                <!--To Add: simply copy and paste, name slide to N + 1-->
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
@@ -230,12 +385,88 @@
                 }
             </script>
         </div>
+
+        <br>
+        <br>
+        <br>
+
+        <div style="display: flex;">
+            <div class="ServiceInfo">
+                <div class="dptwli">
+                    <h2 class="title">IPR Product Replacement</h2>
+                    <img src="Img/MX-Icon-IPR.png">
+                    <p class="para">Protect your investment with an In-Store Product Replacement (IPR) plan from Memory
+                        Express, when you purchase online or at one of our retail locations.</p>
+                    <li class="list1">Hassle free product replacement</li>
+                    <li class="list2">Replacements are new, not refurbished</li>
+                    <li class="list3">Less down time</li>
+                    <a class="link" href="" title="Unavailable">Learn More </a>
+                </div>
+                <div class="dpt">
+                    <h2 class="title">Uber Price Beat Guarantee</h2>
+                    <img src="Img/MX-Icon-Uber.png">
+                    <p class="para">memoryexpress will beat any authorized Canadian retailer/etailer's price both online
+                        and in-store, we'll beat it by 10% of the difference, and if you find a better price within 15
+                        days of purchase we'll beat that too!</p>
+                    <a class="link" href="" title="Unavailable">Learn More </a>
+                </div>
+                <div class="dpt">
+                    <h2 class="title">Tech Zone</h2>
+                    <img src="Img/MX-Icon-TechZone.png">
+                    <p class="para">memoryexpress offers a full range of affordable computer service backed with over 25
+                        years of experience so you know we'll get the job done right. Our professional technicians can
+                        help resolve almost any computer related issues.</p>
+                    <a class="link" href="" title="Unavailable">Learn More </a>
+                </div>
+            </div>
+        </div>
     </main>
 
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!--Simple line for decor-->
+    <div class="decorLine2"></div>
     <footer>
-        <!--Simple line for decor-->
-        <div class="decorLine"></div>
-        <img src="Img/MX_Footer-ME.png" width="20%" height="auto" alt="Footer version of Memeory Express logo.">
+        <img src="Img/MX_Footer-ME.png" alt="Footer version of Memeory Express logo." style="padding: 10px;">
+
+        <!--Titles-->
+        <h3 class="title1">Information</h3>
+        <h3 class="title2">Policies & Procedures</h3>
+        <h3 class="title3">Tools & Resources</h3>
+
+        <!--Content/Links-->
+        <!--First row-->
+        <a href="" class="link1" title="Unavailable">&#8594; link 1</a>
+        <a href="" class="link1" title="Unavailable">&#8594; link 1</a>
+        <a href="" class="link1" title="Unavailable">&#8594; link 1</a>
+
+        <!--Second Row-->
+        <a href="" class="link2" title="Unavailable">&#8594; link 2</a>
+        <a href="" class="link2" title="Unavailable">&#8594; link 2</a>
+        <a href="" class="link2" title="Unavailable">&#8594; link 2</a>
+
+        <!--Third Row-->
+        <a href="" class="link3" title="Unavailable">&#8594; link 3</a>
+        <a href="" class="link3" title="Unavailable">&#8594; link 3</a>
+        <a href="" class="link3" title="Unavailable">&#8594; link 3</a>
+
+        <!--Fourth Row-->
+        <a href="" class="link4" title="Unavailable">&#8594; link 4</a>
+        <a href="" class="link4" title="Unavailable">&#8594; link 4</a>
+        <a href="" class="link4" title="Unavailable">&#8594; link 4</a>
+
+        <!--Fifth-->
+        <a href="" class="link5" title="Unavailable">&#8594; link 5</a>
+        <a href="" class="link5" title="Unavailable">&#8594; link 5</a>
+        <a href="" class="link5" title="Unavailable">&#8594; link 5</a>
+
+        <!--last line-->
+        <p class="lastline">Memory Express is not responsible for misprints or errors on product prices or information,
+            for more information please see our Site Terms of Use. ©1996-2021 Memory Express, Inc. All Rights Reserved.
+            - W02</p>
     </footer>
 </body>
 
