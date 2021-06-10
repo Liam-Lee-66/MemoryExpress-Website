@@ -21,204 +21,258 @@
             width: 100%;
             height: 5px;
         }
-    </style>
 
+        main table {
+            width: 95%;
+            margin: auto;
+        }
+
+        main table td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        main table tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="TopHeader">
-        <!--The top part of website stating: account information, items in cart and announcements-->
-        <div class="Account-Info">
-            <!--Account Info-->
-            <li style="padding-left: 25px;">Welcome
-                <!--User's name after login-->
-            </li>
-            <li>|</li>
-            <li><a href="" class="login-links" title="Unavailable">Log-In</a></li>
-            <li>-</li>
-            <li><a href="" class="login-links" title="Unavailable">Sign-Up</a></li>
-            <li>|</li>
+    <!--Page Container for website-->
+    <div class="pagecontainer">
 
-            <!--Announcement info-->
-            <!--Button need side menu effect-->
-            <li>Announcements</li>
-            <button onclick="openNav()">&#128489;</button>
-            <li>|</li>
-            <li><a href="StoreLocations.html" class="login-links">Store Locatitons</a></li>
-            <li>-</li>
-            <li><a href="" class="login-links">Contact Us</a></li>
-            <li>-</li>
-            <li><a href="" class="login-links">Tech Zone</a></li>
-            <li>-</li>
-            <li><a href="" class="login-links">Corporate Sales</a></li>
+        <div class="TopHeader">
+            <!--The top part of website stating: account information, items in cart and announcements-->
+            <div class="Account-Info">
+                <!--Account Info-->
+                <li style="padding-left: 25px;">Welcome
+                    <!--User's name after login-->
+                </li>
+                <li>|</li>
+                <li><a href="" class="login-links" title="Unavailable">Log-In</a></li>
+                <li>-</li>
+                <li><a href="" class="login-links" title="Unavailable">Sign-Up</a></li>
+                <li>|</li>
 
+                <!--Announcement info-->
+                <!--Button need side menu effect-->
+                <li>Announcements</li>
+                <button onclick="openNav()">&#128489;</button>
+                <li>|</li>
+                <li><a href="StoreLocations.html" class="login-links">Store Locatitons</a></li>
+                <li>-</li>
+                <li><a href="" class="login-links">Contact Us</a></li>
+                <li>-</li>
+                <li><a href="" class="login-links">Tech Zone</a></li>
+                <li>-</li>
+                <li><a href="" class="login-links">Corporate Sales</a></li>
+
+            </div>
+            <!--Simple line for decor-->
+            <div class="decorLine"></div>
         </div>
+        <!--Side menu for announcements/notifications-->
+        <!--Side nav from W3schools: https://www.w3schools.com/howto/howto_js_sidenav.asp-->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <!--Add announcements or notifications here below-->
+            <a href="" title="Unavailable">Sample Link</a>
+            <br>
+            <li>Sample Text</li>
+        </div>
+
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+        <header>
+            <!--Nav Bar-->
+            <nav>
+                <!--Nav Dropdown bar from W3schools: https://www.w3schools.com/css/css_dropdowns.asp-->
+                <!--Home button-->
+                <a href="index.html">&#8962;</a>
+
+                <!--Dropdown menus-->
+                <div class="dropdown">
+                    <button class="dropbtn">Computer Hardware</button>
+                    <div class="dropdown-content">
+                        <a href="" title="Unavailable">Computer Parts</a>
+                        <a href="" title="Unavailable">Computer Peripherals</a>
+                        <a href="" title="Unavailable">Display Devices</a>
+                        <a href="" title="Unavailable">Storage Media</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Computer Systems</button>
+                    <div class="dropdown-content">
+                        <a href="" title="Unavailable">Desktop Computers</a>
+                        <a href="" title="Unavailable">Laptops</a>
+                        <a href="" title="Unavailable">Tablet & Mobile Devices</a>
+                        <a href="" title="Unavailable">Server Systems</a>
+                        <a href="" title="Unavailable">Single Board Computers</a>
+                        <a href="" title="Unavailable">Custon System Configurator</a>
+
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Software & Gaming</button>
+                    <div class="dropdown-content">
+                        <a href="" title="Unavailable">Software</a>
+                        <a href="" title="Unavailable">Gaming</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Networking</button>
+                    <div class="dropdown-content">
+                        <a href="" title="Unavailable">Wired Networking</a>
+                        <a href="" title="Unavailable">Wireless Networking</a>
+                        <a href="" title="Unavailable">Power Line Networking</a>
+                        <a href="" title="Unavailable">Network Attatcked Storage (NAS)</a>
+                        <a href="" title="Unavailable">Bluetooth Adapters</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">TVs & Home Theater</button>
+                    <div class="dropdown-content">
+                        <a href="" title="Unavailable">Televisions</a>
+                        <a href="" title="Unavailable">Audio</a>
+                        <a href="" title="Unavailable">Video Output Devices</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Cameras & Camcorders</button>
+                    <div class="dropdown-content">
+                        <a href="" title="Unavailable">Digital Cameras</a>
+                        <a href="" title="Unavailable">Film Cameras</a>
+                        <a href="" title="Unavailable">Camcorders</a>
+                        <a href="" title="Unavailable">Surveillance</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">More</button>
+                    <div class="dropdown-content">
+                        <a href="" title="Unavailable">Accessories</a>
+                        <a href="" title="Unavailable">Cables & Adapters</a>
+                        <a href="" title="Unavailable">Telephones</a>
+                        <a href="" title="Unavailable">Toys & Gadgets</a>
+                        <a href="" title="Unavailable">Home & Office</a>
+                        <a href="" title="Unavailable">Food & Drinks</a>
+                        <a href="" title="Unavailable">Gift Cards</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <img src="Img/StoreLocation-header.svg" alt="Store Location Header">
+
+            <br>
+            <br>
+            <br>
+
+            <table>
+                <tr>
+                    <th>Province</th>
+                    <th>Address & Phone Number</th>
+                    <th>Store Hours</th>
+                </tr>
+                <tr>
+                    <td>[Province]</td>
+                    <td>[Street Address]<br>[Postal Code]<br>[Phone number]</td>
+                    <td>Mon-Fri: [Time]<br>Sat: [Time]<br>Sun: [Time]<br>Holidays: [Time]</td>
+                </tr>
+                <tr>
+                    <td>[Province]</td>
+                    <td>[Street Address]<br>[Postal Code]<br>[Phone number]</td>
+                    <td>Mon-Fri: [Time]<br>Sat: [Time]<br>Sun: [Time]<br>Holidays: [Time]</td>
+                </tr>
+                <tr>
+                    <td>[Province]</td>
+                    <td>[Street Address]<br>[Postal Code]<br>[Phone number]</td>
+                    <td>Mon-Fri: [Time]<br>Sat: [Time]<br>Sun: [Time]<br>Holidays: [Time]</td>
+                </tr>
+                <tr>
+                    <td>[Province]</td>
+                    <td>[Street Address]<br>[Postal Code]<br>[Phone number]</td>
+                    <td>Mon-Fri: [Time]<br>Sat: [Time]<br>Sun: [Time]<br>Holidays: [Time]</td>
+                </tr>
+                <tr>
+                    <td>[Province]</td>
+                    <td>[Street Address]<br>[Postal Code]<br>[Phone number]</td>
+                    <td>Mon-Fri: [Time]<br>Sat: [Time]<br>Sun: [Time]<br>Holidays: [Time]</td>
+                </tr>
+            </table>
+        </main>
+
+        <br>
+        <br>
+        <br>
+
         <!--Simple line for decor-->
-        <div class="decorLine"></div>
-    </div>
+        <div class="decorLine2"></div>
+        <div style="width: 100%; display: flex;">
+            <footer>
+                <div class="footer1">
+                    <!--Memory express logo-->
+                    <img src="Img/MX_Footer-ME.png" alt="Footer version of Memeory Express logo."
+                        style="padding: 10px;">
 
-
-    <!--Side menu for announcements/notifications-->
-    <!--Side nav from W3schools: https://www.w3schools.com/howto/howto_js_sidenav.asp-->
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
-        <!--Add announcements or notifications here below-->
-        <a href="" title="Unavailable">Sample Link</a>
-        <br>
-        <li>Sample Text</li>
-    </div>
-
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-        }
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        } 
-    </script>
-
-    <header>
-        <!--Nav Bar-->
-        <nav>
-            <!--Nav Dropdown bar from W3schools: https://www.w3schools.com/css/css_dropdowns.asp-->
-            <!--Home button-->
-            <a href="index.html">&#8962;</a>
-
-            <!--Dropdown menus-->
-            <div class="dropdown">
-                <button class="dropbtn">Computer Hardware</button>
-                <div class="dropdown-content">
-                    <a href="" title="Unavailable">Computer Parts</a>
-                    <a href="" title="Unavailable">Computer Peripherals</a>
-                    <a href="" title="Unavailable">Display Devices</a>
-                    <a href="" title="Unavailable">Storage Media</a>
+                    <!--Table of info-->
+                    <table>
+                        <tr>
+                            <th>Information</th>
+                            <th>Policies & Procedures</th>
+                            <th>Tools & Resources</th>
+                        </tr>
+                        <tr>
+                            <td><a href="">&#8594;Link 1</a></td>
+                            <td><a href="">&#8594;Link 1</a></td>
+                            <td><a href="">&#8594;Link 1</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">&#8594;Link 1</a></td>
+                            <td><a href="">&#8594;Link 1</a></td>
+                            <td><a href="">&#8594;Link 1</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">&#8594;Link 1</a></td>
+                            <td><a href="">&#8594;Link 1</a></td>
+                            <td><a href="">&#8594;Link 1</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">&#8594;Link 1</a></td>
+                            <td><a href="">&#8594;Link 1</a></td>
+                            <td><a href="">&#8594;Link 1</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">&#8594;Link 1</a></td>
+                            <td><a href="">&#8594;Link 1</a></td>
+                            <td><a href="">&#8594;Link 1</a></td>
+                        </tr>
+                    </table>
                 </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Computer Systems</button>
-                <div class="dropdown-content">
-                    <a href="" title="Unavailable">Desktop Computers</a>
-                    <a href="" title="Unavailable">Laptops</a>
-                    <a href="" title="Unavailable">Tablet & Mobile Devices</a>
-                    <a href="" title="Unavailable">Server Systems</a>
-                    <a href="" title="Unavailable">Single Board Computers</a>
-                    <a href="" title="Unavailable">Custon System Configurator</a>
 
+                <p>Memory Express is not responsible for misprints or errors on product prices or information, for more
+                    information please see our Site Terms of Use. ©1996-2021 Memory Express, Inc. All Rights Reserved. -
+                    W03
+                </p>
+
+                <div style="display: flex; width: 100%;">
+                    <a href="" class="fa fa-youtube"></a>
+                    <a href="" class="fa fa-facebook"></a>
+                    <a href="" class="fa fa-twitter"></a>
+                    <a href="" class="fa fa-instagram"></a>
                 </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Software & Gaming</button>
-                <div class="dropdown-content">
-                    <a href="" title="Unavailable">Software</a>
-                    <a href="" title="Unavailable">Gaming</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Networking</button>
-                <div class="dropdown-content">
-                    <a href="" title="Unavailable">Wired Networking</a>
-                    <a href="" title="Unavailable">Wireless Networking</a>
-                    <a href="" title="Unavailable">Power Line Networking</a>
-                    <a href="" title="Unavailable">Network Attatcked Storage (NAS)</a>
-                    <a href="" title="Unavailable">Bluetooth Adapters</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">TVs & Home Theater</button>
-                <div class="dropdown-content">
-                    <a href="" title="Unavailable">Televisions</a>
-                    <a href="" title="Unavailable">Audio</a>
-                    <a href="" title="Unavailable">Video Output Devices</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Cameras & Camcorders</button>
-                <div class="dropdown-content">
-                    <a href="" title="Unavailable">Digital Cameras</a>
-                    <a href="" title="Unavailable">Film Cameras</a>
-                    <a href="" title="Unavailable">Camcorders</a>
-                    <a href="" title="Unavailable">Surveillance</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">More</button>
-                <div class="dropdown-content">
-                    <a href="" title="Unavailable">Accessories</a>
-                    <a href="" title="Unavailable">Cables & Adapters</a>
-                    <a href="" title="Unavailable">Telephones</a>
-                    <a href="" title="Unavailable">Toys & Gadgets</a>
-                    <a href="" title="Unavailable">Home & Office</a>
-                    <a href="" title="Unavailable">Food & Drinks</a>
-                    <a href="" title="Unavailable">Gift Cards</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <img src="Img/StoreLocation-header.svg" alt="Image Header.">
-        
-        <br>
-        <br>
-
-        
-    </main>
-
-    <!--Simple line for decor-->
-    <div class="decorLine2"></div>
-    <div style="width: 100%; display: flex;">
-        <footer>
-            <div class="footer1">
-                <!--Memory express logo-->
-                <img src="Img/MX_Footer-ME.png" alt="Footer version of Memeory Express logo." style="padding: 10px;">
-
-                <!--Table of info-->
-                <table>
-                    <tr>
-                        <th>Information</th>
-                        <th>Policies & Procedures</th>
-                        <th>Tools & Resources</th>
-                    </tr>
-                    <tr>
-                        <td><a href="">&#8594;Link 1</a></td>
-                        <td><a href="">&#8594;Link 1</a></td>
-                        <td><a href="">&#8594;Link 1</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="">&#8594;Link 1</a></td>
-                        <td><a href="">&#8594;Link 1</a></td>
-                        <td><a href="">&#8594;Link 1</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="">&#8594;Link 1</a></td>
-                        <td><a href="">&#8594;Link 1</a></td>
-                        <td><a href="">&#8594;Link 1</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="">&#8594;Link 1</a></td>
-                        <td><a href="">&#8594;Link 1</a></td>
-                        <td><a href="">&#8594;Link 1</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="">&#8594;Link 1</a></td>
-                        <td><a href="">&#8594;Link 1</a></td>
-                        <td><a href="">&#8594;Link 1</a></td>
-                    </tr>
-                </table>
-            </div>
-
-            <p>Memory Express is not responsible for misprints or errors on product prices or information, for more
-                information please see our Site Terms of Use. ©1996-2021 Memory Express, Inc. All Rights Reserved. - W03
-            </p>
-
-            <div style="display: flex; width: 100%;">
-                <a href="" class="fa fa-youtube"></a>
-                <a href="" class="fa fa-facebook"></a>
-                <a href="" class="fa fa-twitter"></a>
-                <a href="" class="fa fa-instagram"></a>
-            </div>
-        </footer>
+            </footer>
+        </div>
     </div>
 </body>
+
 </html>

@@ -132,11 +132,11 @@
         }
 
         .ServiceInfo a {
-            color: rgb(209, 240, 148);
+            color: #fcf55f;
         }
 
         a:hover {
-            color: darkblue;
+            color: black;
         }
 
         .ServiceInfo .dpt,
@@ -194,301 +194,312 @@
 </head>
 
 <body>
-    <div class="TopHeader">
-        <!--The top part of website stating: account information, items in cart and announcements-->
-        <div class="Account-Info">
-            <!--Account Info-->
-            <li style="padding-left: 25px;">Welcome
-                <!--User's name after login-->
-            </li>
-            <li>|</li>
-            <li><a href="" class="login-links" title="Unavailable">Log-In</a></li>
-            <li>-</li>
-            <li><a href="" class="login-links" title="Unavailable">Sign-Up</a></li>
-            <li>|</li>
+    <!--Page Container for website-->
+    <div class="pagecontainer">
 
-            <!--Announcement info-->
-            <!--Button need side menu effect-->
-            <li>Announcements</li>
-            <button onclick="openNav()">&#128489;</button>
-            <li>|</li>
-            <li><a href="StoreLocations.html" class="login-links">Store Locatitons</a></li>
-            <li>-</li>
-            <li><a href="" class="login-links">Contact Us</a></li>
-            <li>-</li>
-            <li><a href="" class="login-links">Tech Zone</a></li>
-            <li>-</li>
-            <li><a href="" class="login-links">Corporate Sales</a></li>
+        <div class="TopHeader">
+            <!--The top part of website stating: account information, items in cart and announcements-->
+            <div class="Account-Info">
+                <!--Account Info-->
+                <li style="padding-left: 25px;">Welcome
+                    <!--User's name after login-->
+                </li>
+                <li>|</li>
+                <li><a href="" class="login-links" title="Unavailable">Log-In</a></li>
+                <li>-</li>
+                <li><a href="" class="login-links" title="Unavailable">Sign-Up</a></li>
+                <li>|</li>
 
+                <!--Announcement info-->
+                <!--Button need side menu effect-->
+                <li>Announcements</li>
+                <button onclick="openNav()">&#128489;</button>
+                <li>|</li>
+                <li><a href="StoreLocations.html" class="login-links">Store Locatitons</a></li>
+                <li>-</li>
+                <li><a href="" class="login-links">Contact Us</a></li>
+                <li>-</li>
+                <li><a href="" class="login-links">Tech Zone</a></li>
+                <li>-</li>
+                <li><a href="" class="login-links">Corporate Sales</a></li>
+
+            </div>
+            <!--Simple line for decor-->
+            <div class="decorLine"></div>
         </div>
-        <!--Simple line for decor-->
-        <div class="decorLine"></div>
-    </div>
 
 
-    <!--Side menu for announcements/notifications-->
-    <!--Side nav from W3schools: https://www.w3schools.com/howto/howto_js_sidenav.asp-->
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!--Side menu for announcements/notifications-->
+        <!--Side nav from W3schools: https://www.w3schools.com/howto/howto_js_sidenav.asp-->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-        <!--Add announcements or notifications here below-->
-        <a href="" title="Unavailable">Sample Link</a>
-        <br>
-        <li>Sample Text</li>
-    </div>
+            <!--Add announcements or notifications here below-->
+            <a href="" title="Unavailable">Sample Link</a>
+            <br>
+            <li>Sample Text</li>
+        </div>
 
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-        }
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        } 
-    </script>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
 
-    <header>
-        <!--Nav Bar-->
-        <nav>
-            <!--Nav Dropdown bar from W3schools: https://www.w3schools.com/css/css_dropdowns.asp-->
-            <!--Home button-->
-            <a href="index.html">&#8962;</a>
+        <header>
+            <!--Nav Bar-->
+            <nav>
+                <!--Nav Dropdown bar from W3schools: https://www.w3schools.com/css/css_dropdowns.asp-->
+                <!--Home button-->
+                <a href="index.html">&#8962;</a>
 
-            <!--Dropdown menus-->
-            <div class="dropdown">
-                <button class="dropbtn">Computer Hardware</button>
-                <div class="dropdown-content">
-                    <a href="" title="Unavailable">Computer Parts</a>
-                    <a href="" title="Unavailable">Computer Peripherals</a>
-                    <a href="" title="Unavailable">Display Devices</a>
-                    <a href="" title="Unavailable">Storage Media</a>
+                <!--Dropdown menus-->
+                <div class="dropdown">
+                    <button class="dropbtn">Computer Hardware</button>
+                    <div class="dropdown-content">
+                        <a href="" title="Unavailable">Computer Parts</a>
+                        <a href="" title="Unavailable">Computer Peripherals</a>
+                        <a href="" title="Unavailable">Display Devices</a>
+                        <a href="" title="Unavailable">Storage Media</a>
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Computer Systems</button>
-                <div class="dropdown-content">
-                    <a href="" title="Unavailable">Desktop Computers</a>
-                    <a href="" title="Unavailable">Laptops</a>
-                    <a href="" title="Unavailable">Tablet & Mobile Devices</a>
-                    <a href="" title="Unavailable">Server Systems</a>
-                    <a href="" title="Unavailable">Single Board Computers</a>
-                    <a href="" title="Unavailable">Custon System Configurator</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Computer Systems</button>
+                    <div class="dropdown-content">
+                        <a href="" title="Unavailable">Desktop Computers</a>
+                        <a href="" title="Unavailable">Laptops</a>
+                        <a href="" title="Unavailable">Tablet & Mobile Devices</a>
+                        <a href="" title="Unavailable">Server Systems</a>
+                        <a href="" title="Unavailable">Single Board Computers</a>
+                        <a href="" title="Unavailable">Custon System Configurator</a>
 
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Software & Gaming</button>
-                <div class="dropdown-content">
-                    <a href="" title="Unavailable">Software</a>
-                    <a href="" title="Unavailable">Gaming</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Software & Gaming</button>
+                    <div class="dropdown-content">
+                        <a href="" title="Unavailable">Software</a>
+                        <a href="" title="Unavailable">Gaming</a>
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Networking</button>
-                <div class="dropdown-content">
-                    <a href="" title="Unavailable">Wired Networking</a>
-                    <a href="" title="Unavailable">Wireless Networking</a>
-                    <a href="" title="Unavailable">Power Line Networking</a>
-                    <a href="" title="Unavailable">Network Attatcked Storage (NAS)</a>
-                    <a href="" title="Unavailable">Bluetooth Adapters</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Networking</button>
+                    <div class="dropdown-content">
+                        <a href="" title="Unavailable">Wired Networking</a>
+                        <a href="" title="Unavailable">Wireless Networking</a>
+                        <a href="" title="Unavailable">Power Line Networking</a>
+                        <a href="" title="Unavailable">Network Attatcked Storage (NAS)</a>
+                        <a href="" title="Unavailable">Bluetooth Adapters</a>
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">TVs & Home Theater</button>
-                <div class="dropdown-content">
-                    <a href="" title="Unavailable">Televisions</a>
-                    <a href="" title="Unavailable">Audio</a>
-                    <a href="" title="Unavailable">Video Output Devices</a>
+                <div class="dropdown">
+                    <button class="dropbtn">TVs & Home Theater</button>
+                    <div class="dropdown-content">
+                        <a href="" title="Unavailable">Televisions</a>
+                        <a href="" title="Unavailable">Audio</a>
+                        <a href="" title="Unavailable">Video Output Devices</a>
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Cameras & Camcorders</button>
-                <div class="dropdown-content">
-                    <a href="" title="Unavailable">Digital Cameras</a>
-                    <a href="" title="Unavailable">Film Cameras</a>
-                    <a href="" title="Unavailable">Camcorders</a>
-                    <a href="" title="Unavailable">Surveillance</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Cameras & Camcorders</button>
+                    <div class="dropdown-content">
+                        <a href="" title="Unavailable">Digital Cameras</a>
+                        <a href="" title="Unavailable">Film Cameras</a>
+                        <a href="" title="Unavailable">Camcorders</a>
+                        <a href="" title="Unavailable">Surveillance</a>
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">More</button>
-                <div class="dropdown-content">
-                    <a href="" title="Unavailable">Accessories</a>
-                    <a href="" title="Unavailable">Cables & Adapters</a>
-                    <a href="" title="Unavailable">Telephones</a>
-                    <a href="" title="Unavailable">Toys & Gadgets</a>
-                    <a href="" title="Unavailable">Home & Office</a>
-                    <a href="" title="Unavailable">Food & Drinks</a>
-                    <a href="" title="Unavailable">Gift Cards</a>
+                <div class="dropdown">
+                    <button class="dropbtn">More</button>
+                    <div class="dropdown-content">
+                        <a href="" title="Unavailable">Accessories</a>
+                        <a href="" title="Unavailable">Cables & Adapters</a>
+                        <a href="" title="Unavailable">Telephones</a>
+                        <a href="" title="Unavailable">Toys & Gadgets</a>
+                        <a href="" title="Unavailable">Home & Office</a>
+                        <a href="" title="Unavailable">Food & Drinks</a>
+                        <a href="" title="Unavailable">Gift Cards</a>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
 
-    <main>
+        <main>
 
-        <br>
-        <br>
-
-        <div class="slidebackground">
-            <!-- Slideshow container -->
-            <div class="slideshow-container">
-
-                <!--To Add: Add div, copy & paste, insert image. Don't forget alt text-->
-                <div class="mySlides fade">
-                    <img src="Img/Notice-Geforce30SeriesLaunch-Jun2021.png" style="width:100%;"
-                        alt="3000 series notification.">
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="Img/ReturnsWarrantyUpdate_Banner.png" style="width:100%" alt="Return Warranty Update">
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="Img/MSI-FathersDay2021_Banner.jpg" style="width:100%" alt="Fathers Day Banner">
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
+            <br>
             <br>
 
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <!--To Add: simply copy and paste, name slide to N + 1-->
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
+            <div class="slidebackground">
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
 
-            <script>
-                var slideIndex = 1;
-                showSlides(slideIndex);
+                    <!--To Add: Add div, copy & paste, insert image. Don't forget alt text-->
+                    <div class="mySlides fade">
+                        <img src="Img/Notice-Geforce30SeriesLaunch-Jun2021.png" style="width:100%;"
+                            alt="3000 series notification.">
+                    </div>
 
-                // Next/previous controls
-                function plusSlides(n) {
-                    showSlides(slideIndex += n);
-                }
+                    <div class="mySlides fade">
+                        <img src="Img/ReturnsWarrantyUpdate_Banner.png" style="width:100%" alt="Return Warranty Update">
+                    </div>
 
-                // Thumbnail image controls
-                function currentSlide(n) {
-                    showSlides(slideIndex = n);
-                }
+                    <div class="mySlides fade">
+                        <img src="Img/MSI-FathersDay2021_Banner.jpg" style="width:100%" alt="Fathers Day Banner">
+                    </div>
 
-                function showSlides(n) {
-                    var i;
-                    var slides = document.getElementsByClassName("mySlides");
-                    var dots = document.getElementsByClassName("dot");
-                    if (n > slides.length) { slideIndex = 1 }
-                    if (n < 1) { slideIndex = slides.length }
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <!--To Add: simply copy and paste, name slide to N + 1-->
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+
+                <script>
+                    var slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    // Next/previous controls
+                    function plusSlides(n) {
+                        showSlides(slideIndex += n);
                     }
-                    for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" active", "");
+
+                    // Thumbnail image controls
+                    function currentSlide(n) {
+                        showSlides(slideIndex = n);
                     }
-                    slides[slideIndex - 1].style.display = "block";
-                    dots[slideIndex - 1].className += " active";
-                }
-            </script>
+
+                    function showSlides(n) {
+                        var i;
+                        var slides = document.getElementsByClassName("mySlides");
+                        var dots = document.getElementsByClassName("dot");
+                        if (n > slides.length) { slideIndex = 1 }
+                        if (n < 1) { slideIndex = slides.length }
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex - 1].style.display = "block";
+                        dots[slideIndex - 1].className += " active";
+                    }
+                </script>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <!--Continer that will fix the vertical position of the 3 divs-->
+            <div style="display: flex;">
+                <div class="ServiceInfo">
+                    <div class="dptwli">
+                        <h2 class="title">IPR Product Replacement</h2>
+                        <img src="Img/MX-Icon-IPR.png">
+                        <p class="para">Protect your investment with an In-Store Product Replacement (IPR) plan from
+                            Memory
+                            Express, when you purchase online or at one of our retail locations.</p>
+                        <li class="list1">Hassle free product replacement</li>
+                        <li class="list2">Replacements are new, not refurbished</li>
+                        <li class="list3">Less down time</li>
+                        <a class="link" href="" title="Unavailable">Learn More </a>
+                    </div>
+                    <div class="dpt">
+                        <h2 class="title">Uber Price Beat Guarantee</h2>
+                        <img src="Img/MX-Icon-Uber.png">
+                        <p class="para">memoryexpress will beat any authorized Canadian retailer/etailer's price both
+                            online
+                            and in-store, we'll beat it by 10% of the difference, and if you find a better price within
+                            15
+                            days of purchase we'll beat that too!</p>
+                        <a class="link" href="" title="Unavailable">Learn More </a>
+                    </div>
+                    <div class="dpt">
+                        <h2 class="title">Tech Zone</h2>
+                        <img src="Img/MX-Icon-TechZone.png">
+                        <p class="para">memoryexpress offers a full range of affordable computer service backed with
+                            over 25
+                            years of experience so you know we'll get the job done right. Our professional technicians
+                            can
+                            help resolve almost any computer related issues.</p>
+                        <a class="link" href="" title="Unavailable">Learn More </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!--Simple line for decor-->
+        <div class="decorLine2"></div>
+        <div style="width: 100%; display: flex;">
+            <footer>
+                <div class="footer1">
+                    <!--Memory express logo-->
+                    <img src="Img/MX_Footer-ME.png" alt="Footer version of Memeory Express logo."
+                        style="padding: 10px;">
+
+                    <!--Table of info-->
+                    <table>
+                        <tr>
+                            <th>Information</th>
+                            <th>Policies & Procedures</th>
+                            <th>Tools & Resources</th>
+                        </tr>
+                        <tr>
+                            <td><a href="">&#8594;Link 1</a></td>
+                            <td><a href="">&#8594;Link 1</a></td>
+                            <td><a href="">&#8594;Link 1</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">&#8594;Link 1</a></td>
+                            <td><a href="">&#8594;Link 1</a></td>
+                            <td><a href="">&#8594;Link 1</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">&#8594;Link 1</a></td>
+                            <td><a href="">&#8594;Link 1</a></td>
+                            <td><a href="">&#8594;Link 1</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">&#8594;Link 1</a></td>
+                            <td><a href="">&#8594;Link 1</a></td>
+                            <td><a href="">&#8594;Link 1</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">&#8594;Link 1</a></td>
+                            <td><a href="">&#8594;Link 1</a></td>
+                            <td><a href="">&#8594;Link 1</a></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <p>Memory Express is not responsible for misprints or errors on product prices or information, for more
+                    information please see our Site Terms of Use. ©1996-2021 Memory Express, Inc. All Rights Reserved. -
+                    W03
+                </p>
+
+                <div style="display: flex; width: 100%;">
+                    <a href="" class="fa fa-youtube"></a>
+                    <a href="" class="fa fa-facebook"></a>
+                    <a href="" class="fa fa-twitter"></a>
+                    <a href="" class="fa fa-instagram"></a>
+                </div>
+            </footer>
         </div>
-
-        <br>
-        <br>
-        <br>
-
-        <!--Continer that will fix the vertical position of the 3 divs-->
-        <div style="display: flex;">
-            <div class="ServiceInfo">
-                <div class="dptwli">
-                    <h2 class="title">IPR Product Replacement</h2>
-                    <img src="Img/MX-Icon-IPR.png">
-                    <p class="para">Protect your investment with an In-Store Product Replacement (IPR) plan from Memory
-                        Express, when you purchase online or at one of our retail locations.</p>
-                    <li class="list1">Hassle free product replacement</li>
-                    <li class="list2">Replacements are new, not refurbished</li>
-                    <li class="list3">Less down time</li>
-                    <a class="link" href="" title="Unavailable">Learn More </a>
-                </div>
-                <div class="dpt">
-                    <h2 class="title">Uber Price Beat Guarantee</h2>
-                    <img src="Img/MX-Icon-Uber.png">
-                    <p class="para">memoryexpress will beat any authorized Canadian retailer/etailer's price both online
-                        and in-store, we'll beat it by 10% of the difference, and if you find a better price within 15
-                        days of purchase we'll beat that too!</p>
-                    <a class="link" href="" title="Unavailable">Learn More </a>
-                </div>
-                <div class="dpt">
-                    <h2 class="title">Tech Zone</h2>
-                    <img src="Img/MX-Icon-TechZone.png">
-                    <p class="para">memoryexpress offers a full range of affordable computer service backed with over 25
-                        years of experience so you know we'll get the job done right. Our professional technicians can
-                        help resolve almost any computer related issues.</p>
-                    <a class="link" href="" title="Unavailable">Learn More </a>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <!--Simple line for decor-->
-    <div class="decorLine2"></div>
-    <div style="width: 100%; display: flex;">
-        <footer>
-            <div class="footer1">
-                <!--Memory express logo-->
-                <img src="Img/MX_Footer-ME.png" alt="Footer version of Memeory Express logo." style="padding: 10px;">
-
-                <!--Table of info-->
-                <table>
-                    <tr>
-                        <th>Information</th>
-                        <th>Policies & Procedures</th>
-                        <th>Tools & Resources</th>
-                    </tr>
-                    <tr>
-                        <td><a href="">&#8594;Link 1</a></td>
-                        <td><a href="">&#8594;Link 1</a></td>
-                        <td><a href="">&#8594;Link 1</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="">&#8594;Link 1</a></td>
-                        <td><a href="">&#8594;Link 1</a></td>
-                        <td><a href="">&#8594;Link 1</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="">&#8594;Link 1</a></td>
-                        <td><a href="">&#8594;Link 1</a></td>
-                        <td><a href="">&#8594;Link 1</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="">&#8594;Link 1</a></td>
-                        <td><a href="">&#8594;Link 1</a></td>
-                        <td><a href="">&#8594;Link 1</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="">&#8594;Link 1</a></td>
-                        <td><a href="">&#8594;Link 1</a></td>
-                        <td><a href="">&#8594;Link 1</a></td>
-                    </tr>
-                </table>
-            </div>
-
-            <p>Memory Express is not responsible for misprints or errors on product prices or information, for more
-                information please see our Site Terms of Use. ©1996-2021 Memory Express, Inc. All Rights Reserved. - W03
-            </p>
-
-            <div style="display: flex; width: 100%;">
-                <a href="" class="fa fa-youtube"></a>
-                <a href="" class="fa fa-facebook"></a>
-                <a href="" class="fa fa-twitter"></a>
-                <a href="" class="fa fa-instagram"></a>
-            </div>
-        </footer>
     </div>
 </body>
 
