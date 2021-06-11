@@ -1,5 +1,5 @@
 .TopHeader {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, "Times New Roman", Times, serif;
     background-color: $gray-black;
     color: whitesmoke;
     .Account-info {
@@ -29,7 +29,7 @@
 /*
     Side nav from W3schools: https://www.w3schools.com/howto/howto_js_sidenav.asp
 */
-.sidenav{
+.sidenav {
     height: 100%;
     width: 0;
     position: fixed;
@@ -41,7 +41,7 @@
     padding-top: 60px;
     transition: 0.5s;
 
-    a{
+    a {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
         font-size: 25px;
@@ -49,11 +49,11 @@
         display: block;
         transition: 0.3s;
 
-        &:hover{
+        &:hover {
             color: $first-grn;
         }
     }
-    li{
+    li {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
         font-size: 18px;
@@ -68,42 +68,41 @@
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-  }
+}
 
-
-header{
+header {
     font-family: Arial, Helvetica, sans-serif;
     .centerheader {
         display: flex;
         justify-content: center;
         align-items: center;
 
-        img{
+        img {
             width: 20%;
             margin-right: 20px;
         }
-        
+
         button {
             padding: 15px;
             margin: 15px;
             background-color: whitesmoke;
             color: black;
-            &:hover{
+            &:hover {
                 background-color: $third-grn;
                 cursor: pointer;
             }
         }
 
-        .searchbar-design{
+        .searchbar-design {
             width: 30%;
             display: flex;
             justify-content: flex-end;
-            .input{
+            .input {
                 background-color: whitesmoke;
                 width: 100%;
                 text-align: center;
             }
-            .enter{
+            .enter {
                 background-color: $first-grn;
                 width: 20%;
                 text-align: center;
@@ -131,12 +130,12 @@ header{
             padding: 14px 16px;
             text-decoration: none;
         }
-    
+
         .dropdown {
             float: left;
             overflow: hidden;
         }
-    
+
         .dropbtn {
             font-size: 16px;
             border: none;
@@ -146,29 +145,29 @@ header{
             background-color: inherit;
             font-family: inherit;
         }
-    
+
         .dropdown-content {
             display: none;
             position: absolute;
             background-color: whitesmoke;
             min-width: 160px;
             z-index: 1;
-    
+
             a {
                 float: none;
                 color: black;
-                padding: none; 
+                padding: none;
                 text-decoration: none;
                 display: block;
                 text-align: left;
-    
+
                 &:hover {
                     background-color: $third-grn;
                     border: none;
                 }
             }
         }
-    
+
         /* 
             Apparently if I apply "border: 2px solid $gray-black" the nav bar elements move.
             The possible reason of this issue is possibly increase in size due to border. 
@@ -178,9 +177,203 @@ header{
             background-color: $first-yellow;
             color: $gray-black;
         }
-    
+
         .dropdown:hover .dropdown-content {
             display: block;
+        }
+    }
+}
+
+/*Mobile Version*/
+@media all and (max-width: 750px) {
+    .TopHeader {
+        text-align: center;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background-color: $gray-black;
+        color: whitesmoke;
+        .Account-info {
+            .gone{
+                display: none;
+            }
+            li {
+                display: inline-block;
+                padding: 10px;
+                padding-left: 10px;
+            }
+
+            .login-links {
+                color: $first-yellow;
+                &:hover {
+                    color: $first-grn;
+                }
+            }
+            button {
+                border: none;
+                background-color: $first-yellow;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: $first-grn;
+                }
+            }
+        }
+    }
+    /*
+        Side nav from W3schools: https://www.w3schools.com/howto/howto_js_sidenav.asp
+    */
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.5s;
+
+        a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: whitesmoke;
+            display: block;
+            transition: 0.3s;
+
+            &:hover {
+                color: $first-grn;
+            }
+        }
+        li {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: whitesmoke;
+            display: block;
+            transition: 0.3s;
+        }
+    }
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    header {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        .centerheader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 20%;
+                margin-right: 20px;
+            }
+
+            button {
+                padding: 15px;
+                margin: 15px;
+                background-color: whitesmoke;
+                color: black;
+                &:hover {
+                    background-color: $third-grn;
+                    cursor: pointer;
+                }
+            }
+
+            .searchbar-design {
+                width: 30%;
+                display: flex;
+                justify-content: flex-end;
+                .input {
+                    background-color: whitesmoke;
+                    width: 100%;
+                    text-align: center;
+                }
+                .enter {
+                    background-color: $first-grn;
+                    width: 20%;
+                    text-align: center;
+                }
+            }
+        }
+
+        nav {
+            /*Nav Dropdown menu from W3schools: https://www.w3schools.com/css/css_dropdowns.asp*/
+            overflow: hidden;
+            background-color: $gray-black;
+            width: 100%;
+
+            /* 
+                should be applying to the nav bar buttons itself, but somehow effects the dropdown options.
+                assuming it's because there are no <a href=""> in the nav bar.
+        
+                Confirmed: This code is for the <a href=""> in the nav bar. It is no longer needed for me, but I'll leave it be.
+            */
+            a {
+                float: left;
+                font-size: 16px;
+                color: whitesmoke;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
+
+            .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: whitesmoke;
+                min-width: 160px;
+                z-index: 1;
+
+                a {
+                    float: none;
+                    color: black;
+                    padding: none;
+                    text-decoration: none;
+                    display: block;
+                    text-align: left;
+
+                    &:hover {
+                        background-color: $third-grn;
+                        border: none;
+                    }
+                }
+            }
+
+            /* 
+                Apparently if I apply "border: 2px solid $gray-black" the nav bar elements move.
+                The possible reason of this issue is possibly increase in size due to border. 
+            */
+            a:hover,
+            .dropdown:hover .dropbtn {
+                background-color: $first-yellow;
+                color: $gray-black;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
         }
     }
 }

@@ -8,9 +8,6 @@ body {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#d1f094), to(white));
   background-image: linear-gradient(#d1f094, white);
   background-repeat: no-repeat;
-}
-
-.pagecontainer {
   position: relative;
   min-height: 100vh;
 }
@@ -22,7 +19,7 @@ a {
 
 /*importing content from "header.scss"*/
 .TopHeader {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   background-color: #333333;
   color: whitesmoke;
 }
@@ -228,6 +225,194 @@ header nav .dropdown:hover .dropdown-content {
   display: block;
 }
 
+/*Mobile Version*/
+@media all and (max-width: 750px) {
+  .TopHeader {
+    text-align: center;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background-color: #333333;
+    color: whitesmoke;
+  }
+  .TopHeader .Account-info .gone {
+    display: none;
+  }
+  .TopHeader .Account-info li {
+    display: inline-block;
+    padding: 10px;
+    padding-left: 10px;
+  }
+  .TopHeader .Account-info .login-links {
+    color: #fcf55f;
+  }
+  .TopHeader .Account-info .login-links:hover {
+    color: #4fb949;
+  }
+  .TopHeader .Account-info button {
+    border: none;
+    background-color: #fcf55f;
+  }
+  .TopHeader .Account-info button:hover {
+    cursor: pointer;
+    background-color: #4fb949;
+  }
+  /*
+        Side nav from W3schools: https://www.w3schools.com/howto/howto_js_sidenav.asp
+    */
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: whitesmoke;
+    display: block;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .sidenav a:hover {
+    color: #4fb949;
+  }
+  .sidenav li {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: whitesmoke;
+    display: block;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  header {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  header .centerheader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .centerheader img {
+    width: 20%;
+    margin-right: 20px;
+  }
+  header .centerheader button {
+    padding: 15px;
+    margin: 15px;
+    background-color: whitesmoke;
+    color: black;
+  }
+  header .centerheader button:hover {
+    background-color: #d1f094;
+    cursor: pointer;
+  }
+  header .centerheader .searchbar-design {
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  header .centerheader .searchbar-design .input {
+    background-color: whitesmoke;
+    width: 100%;
+    text-align: center;
+  }
+  header .centerheader .searchbar-design .enter {
+    background-color: #4fb949;
+    width: 20%;
+    text-align: center;
+  }
+  header nav {
+    /*Nav Dropdown menu from W3schools: https://www.w3schools.com/css/css_dropdowns.asp*/
+    overflow: hidden;
+    background-color: #333333;
+    width: 100%;
+    /* 
+                should be applying to the nav bar buttons itself, but somehow effects the dropdown options.
+                assuming it's because there are no <a href=""> in the nav bar.
+        
+                Confirmed: This code is for the <a href=""> in the nav bar. It is no longer needed for me, but I'll leave it be.
+            */
+    /* 
+                Apparently if I apply "border: 2px solid $gray-black" the nav bar elements move.
+                The possible reason of this issue is possibly increase in size due to border. 
+            */
+  }
+  header nav a {
+    float: left;
+    font-size: 16px;
+    color: whitesmoke;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  header nav .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  header nav .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+  }
+  header nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    min-width: 160px;
+    z-index: 1;
+  }
+  header nav .dropdown-content a {
+    float: none;
+    color: black;
+    padding: none;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  header nav .dropdown-content a:hover {
+    background-color: #d1f094;
+    border: none;
+  }
+  header nav a:hover,
+  header nav .dropdown:hover .dropbtn {
+    background-color: #fcf55f;
+    color: #333333;
+  }
+  header nav .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
+
 /*
     This guy in the internet fixed my footer problem. (where it overlapped the content and stay there)
     https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/
@@ -317,10 +502,6 @@ footer .fa:hover {
   opacity: 0.7;
 }
 
-footer .fa:hover {
-  opacity: 0.7;
-}
-
 footer .fa-facebook {
   width: 100%;
   background: #3b5998;
@@ -343,5 +524,97 @@ footer .fa-instagram {
   width: 100%;
   background: #d6249f;
   color: white;
+}
+
+@media all and (max-width: 750px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 25%;
+    background-color: #333333;
+    text-align: center;
+    /* Facebook */
+    /* Twitter */
+    /* Youtube */
+    /* Instagram */
+  }
+  footer .footer1 {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .footer1 img {
+    width: 27%;
+    padding: 10px;
+  }
+  footer .footer1 table {
+    font-size: 10px;
+    width: 100%;
+    color: whitesmoke;
+  }
+  footer .footer1 table th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  footer .footer1 table td {
+    text-align: left;
+  }
+  footer .footer1 table a {
+    color: #fcf55f;
+  }
+  footer .footer1 table a:hover {
+    color: #4fb949;
+  }
+  footer p {
+    padding: 15px;
+    color: whitesmoke;
+  }
+  footer .fa {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+  }
+  footer .fa:hover {
+    opacity: 0.7;
+  }
+  footer .fa-facebook {
+    width: 100%;
+    background: #3b5998;
+    color: white;
+  }
+  footer .fa-twitter {
+    width: 100%;
+    background: #55acee;
+    color: white;
+  }
+  footer .fa-youtube {
+    width: 100%;
+    background: #bb0000;
+    color: white;
+  }
+  footer .fa-instagram {
+    width: 100%;
+    background: #d6249f;
+    color: white;
+  }
 }
 /*# sourceMappingURL=main-style.css.map */
