@@ -22,64 +22,49 @@
             height: 5px;
         }
 
-        main table {
-            width: 95%;
-            margin: auto;
-        }
-
-        main table td,
-        th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
+        main #intro h1,
+        p,
+        h2 {
+            color: black;
             text-align: center;
         }
 
-        main table tr:nth-child(even) {
-            background-color: #dddddd;
+        main #intro a {
+            color: rgb(79, 185, 73);
         }
 
-        /*Mobile Version*/
-        @media all and (max-width: 750px) {
-            .decorLine {
-                background-color: rgb(79, 185, 73);
-                width: 100%;
-                height: 1px;
-            }
+        main a:hover {
+            color: blue;
+        }
 
-            .decorLine2 {
-                background-color: rgb(79, 185, 73);
-                width: 100%;
-                height: 5px;
-            }
+        main #BigDivHolder {
+            display: flex;
+            flex-direction: column;
+        }
 
-            main table {
-                width: 95%;
-                margin: auto;
-            }
+        main #BigDivHolder .ContentHolder {
+            background: none;
+            border: 2px solid rgb(51, 51, 51);
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+        }
 
-            main table td,
-            th {
-                border: 1px solid #dddddd;
-                text-align: left;
-                padding: 8px;
-                text-align: center;
-            }
+        main #BigDivHolder .ContentHolder .Info {
+            background: none;
+            color: black;
+            text-align: left;
+        }
 
-            main table tr:nth-child(even) {
-                background-color: #dddddd;
-            }
-
-            /*Had to remove the "Store Hours" row, or the whole table would display weirdly*/
-            main table .time {
-                display: none;
-            }
+        main #BigDivHolder .ContentHolder .Price {
+            background-color: rgb(79, 185, 73);
+            color: whitesmoke;
         }
     </style>
+
 </head>
 
 <body>
-
     <div class="TopHeader">
         <!--The top part of website stating: account information, items in cart and announcements-->
         <div class="Account-Info">
@@ -97,12 +82,13 @@
             <!--Button need side menu effect-->
             <li>Announcements</li>
             <button onclick="openNav()">&#128489;</button>
+
             <li>|</li>
             <li><a href="StoreLocations.html" class="login-links">Store Locatitons</a></li>
             <li class="gone">-</li>
-            <li><a href="" title="Unavailable" class="login-links">Contact Us</a></li>
+            <li><a href="" class="login-links">Contact Us</a></li>
             <li class="gone">-</li>
-            <li><a href="TechZone.html" class="login-links">Tech Zone</a></li>
+            <li><a href="" class="login-links">Tech Zone</a></li>
             <li class="gone">-</li>
             <li><a href="" class="login-links">Corporate Sales</a></li>
 
@@ -110,6 +96,8 @@
         <!--Simple line for decor-->
         <div class="decorLine"></div>
     </div>
+
+
     <!--Side menu for announcements/notifications-->
     <!--Side nav from W3schools: https://www.w3schools.com/howto/howto_js_sidenav.asp-->
     <div id="mySidenav" class="sidenav">
@@ -129,6 +117,7 @@
             document.getElementById("mySidenav").style.width = "0";
         }
     </script>
+
     <header>
         <!--Nav Bar-->
         <nav>
@@ -208,91 +197,42 @@
     </header>
 
     <main>
-        <img src="Img/StoreLocation-header.svg" alt="Store Location Header">
+        <!--Image Header-->
+        <img src="Img/TechZone-header.svg" alt="Image Header">
+
+        <br>
+        <br>
+
+        <div id="Intro">
+            <h1>Welcome to Tech Zone!</h1>
+            <p>TechZone is a division of memoryexpress specializing in computer and electronics repair. We offer a full
+                range of Repair & Diagnostic services in every memoryexpress retail store.</p>
+
+            <br>
+
+            <h2>In Store Services</h2>
+            <p>In-Store Services are available at your local memoryexpress retail store. <a
+                    href="StoreLocations.html">Find a Location Near You!</a></p>
+        </div>
 
         <br>
         <br>
         <br>
 
-        <table>
-            <tr>
-                <th>Province</th>
-                <th>Location</th>
-                <th>Address & Phone Number</th>
-                <th class="time">Store Hours</th>
-            </tr>
-            <tr>
-                <td>Alberta</td>
-                <td>Calgary North East</td>
-                <td>3305 - 32nd Street NE<br>Calgary, AB T1Y 5X7<br>Phone: 403-313-8883</td>
-                <td class="time">Mon-Fri: 10AM - 8PM<br>Sat: 10AM - 6PM<br>Sun: 11AM - 6PM<br>Holidays: 11AM - 6PM</td>
-            </tr>
-            <tr>
-                <td>Alberta</td>
-                <td>Calgary North West</td>
-                <td>#167 - 5005 Dalhousie Dr. NW (Dalhousie Station)<br>Calgary, AB T3A 5R8<br>Phone: 403-450-7360</td>
-                <td class="time">Mon-Fri: 11AM - 8PM<br>Sat: 10AM - 6PM<br>Sun: 11AM - 6PM<br>Holidays: 11AM - 6PM</td>
-            </tr>
-            <tr>
-                <td>Alberta</td>
-                <td>Calgary South East</td>
-                <td>120 - 58 Ave SE<br>Calgary, AB TH2 0N7<br>Phone: 403-253-5676</td>
-                <td class="time">Mon-Fri: 11AM - 7PM<br>Sat: 10AM - 6PM<br>Sun: 11AM - 6PM<br>Holidays: 11AM - 6PM</td>
-            </tr>
-            <tr>
-                <td>Alberta</td>
-                <td>Calgary Online</td>
-                <td>3305 - 32nd Street NE<br>Calgary, AB TY1 5X7<br>Phone: 866-922-6369</td>
-                <td class="time">Mon-Fri: 10AM - 5PM<br>Sat: CLOSED<br>Sun: CLOSED<br>Holidays: CLOSED</td>
-            </tr>
-            <tr>
-                <td>Alberta</td>
-                <td>Edmonton South</td>
-                <td>10187 - 34 Ave<br>Edmonton, AB T6E 6J8<br>Phone: 780-469-4616</td>
-                <td class="time">Mon-Fri: 10AM - 7PM<br>Sat: 10AM - 6PM<br>Sun: 11AM - 6PM<br>Holidays: 11AM - 6PM</td>
-            </tr>
-            <tr>
-                <td>Alberta</td>
-                <td>Edmonton West</td>
-                <td>17203 - 109 Ave NW<br>Edmonton, AB T5S 1H7<br>Phone: 780-784-1188</td>
-                <td class="time">Mon-Fri: 10AM - 8PM<br>Sat: 10AM - 6PM<br>Sun: 11AM - 6PM<br>Holidays: 11AM - 6PM</td>
-            </tr>
-            <tr>
-                <td>British Columbia</td>
-                <td>Greater Vancouver Burnaby</td>
-                <td>#160 - 5172 Kingsway (Burlington Square)<br>Burnaby, BC V5H 2E8<br>Phone: 604-416-2088</td>
-                <td class="time">Mon-Fri: 10AM - 8PM<br>Sat: 10AM - 6PM<br>Sun: 11AM - 6PM<br>Holidays: 11AM - 6PM</td>
-            </tr>
-            <tr>
-                <td>British Columbia</td>
-                <td>Greater Vancouver Langley</td>
-                <td>20202 Fraser Hwy (ME Plaza)<br>Langley, BC V3A 4E6<br>Phone: 604-546-0850</td>
-                <td class="time">Mon-Fri: 10AM - 8PM<br>Sat: 10AM - 6PM<br>Sun: 11AM - 6PM<br>Holidays: 11AM - 6PM</td>
-            </tr>
-            <tr>
-                <td>British Columbia</td>
-                <td>Greater Vancouver Vancouver</td>
-                <td>1900 West Broadway<br>Vancouver, BC V6J 1Z2<br>Phone: 778-945-2488</td>
-                <td class="time">Mon-Fri: 10AM - 8PM<br>Sat: 10AM - 6PM<br>Sun: 11AM - 6PM<br>Holidays: 11AM - 6PM</td>
-            </tr>
-            <tr>
-                <td>British Columbia</td>
-                <td>Victoria Downtown</td>
-                <td>Unit 2, 2680 Blanshard<br>Victoria, BC V8T 5E1<br>Phone: 250-940-5151</td>
-                <td class="time">Mon-Fri: 10AM - 8PM<br>Sat: 10AM - 6PM<br>Sun: 11AM - 6PM<br>Holidays: 11AM - 6PM</td>
-            </tr>
-            <tr>
-                <td>Manitoba</td>
-                <td>Winnipeg West</td>
-                <td>Unit A, 730 - Century Street<br>Winnipeg, MB R3H 0M1<br>Phone: 204-772-6177</td>
-                <td class="time">Mon-Fri: 10AM - 8PM<br>Sat: 10AM - 6PM<br>Sun: 11AM - 6PM<br>Holidays: 11AM - 6PM</td>
-            </tr>
-        </table>
+        <div id="BigDivHolder">
+            <div class="ContentHolder">
+                <div class="Info">
+                    <h3>Quickmount</h1>
+                        <p>When you purchase a CPU & Motherboard at memoryexpress our TechZone Technicians will install
+                            the CPU on the Motherboard, Update the BIOS, Post-check the board... and if you purchase new
+                            memory we will also install that too!</p>
+                </div>
+                <div class="Price">
+                    <h1>Free</h1>
+                </div>
+            </div>
+        </div>
     </main>
-
-    <br>
-    <br>
-    <br>
 
     <!--Simple line for decor-->
     <div class="decorLine2"></div>
@@ -338,8 +278,8 @@
             </div>
 
             <p>Memory Express is not responsible for misprints or errors on product prices or information, for more
-                information please see our <a href="" style="color: #fcf55f;" title="Unavailable">Site Terms of Use</a>.
-                ©1996-2021 Memory Express, Inc. All Rights Reserved. -
+                information please see our <a href="" style="color: #fcf55f;">Site Terms of Use</a>. ©1996-2021 Memory
+                Express, Inc. All Rights Reserved. -
                 W03
             </p>
 
