@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
+        /*
+            The reason .decorLine and .decorLine2 are not in main-style.scss:
+            I don't know how to apply one code to all divs in SCSS. I decided to simply add it as Internal so it get's applied easily to all eliments. 
+        */
         .decorLine {
             background-color: rgb(79, 185, 73);
             width: 100%;
@@ -193,6 +197,7 @@
 
         /*mobile version*/
         @media all and (max-width: 750px) {
+
             /*
                 Service information Divs.
                 Resize font and remove image.
@@ -241,6 +246,7 @@
 <body>
     <div class="TopHeader">
         <!--The top part of website stating: account information, items in cart and announcements-->
+        <!--Can't use code "ul" because it makes weird extra space and I don't know how to remove that.-->
         <div class="Account-Info">
             <!--Account Info-->
             <li style="padding-left: 25px;">Welcome
@@ -258,19 +264,19 @@
             <button onclick="openNav()">&#128489;</button>
 
             <li>|</li>
-            <li><a href="StoreLocations.html" class="login-links">Store Locatitons</a></li>
+            <li><a href="StoreLocations.html" class="login-links">Store Locations</a></li>
             <li class="gone">-</li>
-            <li><a href="" class="login-links">Contact Us</a></li>
+            <li><a href="" title="Unavailable" class="login-links">Contact Us</a></li>
             <li class="gone">-</li>
-            <li><a href="TechZone.html" class="login-links">Tech Zone</a></li>
+            <li><a href="" title="Unavailable" class="login-links">Tech Zone</a></li>
             <li class="gone">-</li>
             <li><a href="CorporateSales.html" class="login-links">Corporate Sales</a></li>
 
         </div>
+
         <!--Simple line for decor-->
         <div class="decorLine"></div>
     </div>
-
 
     <!--Side menu for announcements/notifications-->
     <!--Side nav from W3schools: https://www.w3schools.com/howto/howto_js_sidenav.asp-->
@@ -283,6 +289,7 @@
         <li>Sample Text</li>
     </div>
 
+    <!--Script for SideNav-->
     <script>
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
@@ -300,6 +307,7 @@
             <a href="index.html">&#8962;</a>
 
             <!--Dropdown menus-->
+            <!--Computer Hardware-->
             <div class="dropdown">
                 <button class="dropbtn">Computer Hardware</button>
                 <div class="dropdown-content">
@@ -309,6 +317,7 @@
                     <a href="" title="Unavailable">Storage Media</a>
                 </div>
             </div>
+            <!--Comtuper Systems-->
             <div class="dropdown">
                 <button class="dropbtn">Computer Systems</button>
                 <div class="dropdown-content">
@@ -321,6 +330,7 @@
 
                 </div>
             </div>
+            <!--Software & Gaming-->
             <div class="dropdown">
                 <button class="dropbtn">Software & Gaming</button>
                 <div class="dropdown-content">
@@ -328,6 +338,7 @@
                     <a href="" title="Unavailable">Gaming</a>
                 </div>
             </div>
+            <!--Networking-->
             <div class="dropdown">
                 <button class="dropbtn">Networking</button>
                 <div class="dropdown-content">
@@ -338,6 +349,7 @@
                     <a href="" title="Unavailable">Bluetooth Adapters</a>
                 </div>
             </div>
+            <!--TVs & Home Theater-->
             <div class="dropdown">
                 <button class="dropbtn">TVs & Home Theater</button>
                 <div class="dropdown-content">
@@ -346,6 +358,7 @@
                     <a href="" title="Unavailable">Video Output Devices</a>
                 </div>
             </div>
+            <!--Cameras & Camcorders-->
             <div class="dropdown">
                 <button class="dropbtn">Cameras & Camcorders</button>
                 <div class="dropdown-content">
@@ -355,6 +368,7 @@
                     <a href="" title="Unavailable">Surveillance</a>
                 </div>
             </div>
+            <!--More-->
             <div class="dropdown">
                 <button class="dropbtn">More</button>
                 <div class="dropdown-content">
@@ -375,69 +389,70 @@
         <br>
         <br>
 
-        <div class="slidebackground">
-            <!-- Slideshow container -->
-            <div class="slideshow-container">
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
 
-                <!--To Add: Add div, copy & paste, insert image. Don't forget alt text-->
-                <div class="mySlides fade">
-                    <img src="Img/Home/Slideshow/Notice-Geforce30SeriesLaunch-Jun2021.png" style="width:100%;"
-                        alt="3000 series notification.">
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="Img/Home/Slideshow/ReturnsWarrantyUpdate_Banner.png" style="width:100%" alt="Return Warranty Update">
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="Img/Home/Slideshow/Nvidia-GeForceRTX3080Ti_Banner.jpg" style="width:100%" alt="Fathers Day Banner">
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-            <br>
-
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <!--To Add: simply copy and paste, name slide to N + 1-->
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
+            <!--To Add: Add div, copy & paste, insert image. Don't forget alt text-->
+            <div class="mySlides fade">
+                <img src="Img/Home/Slideshow/Notice-Geforce30SeriesLaunch-Jun2021.png" style="width:100%;"
+                    alt="3000 series notification.">
             </div>
 
-            <script>
-                var slideIndex = 1;
-                showSlides(slideIndex);
+            <div class="mySlides fade">
+                <img src="Img/Home/Slideshow/ReturnsWarrantyUpdate_Banner.png" style="width:100%"
+                    alt="Return Warranty Update">
+            </div>
 
-                // Next/previous controls
-                function plusSlides(n) {
-                    showSlides(slideIndex += n);
-                }
+            <div class="mySlides fade">
+                <img src="Img/Home/Slideshow/Nvidia-GeForceRTX3080Ti_Banner.jpg" style="width:100%"
+                    alt="Fathers Day Banner">
+            </div>
 
-                // Thumbnail image controls
-                function currentSlide(n) {
-                    showSlides(slideIndex = n);
-                }
-
-                function showSlides(n) {
-                    var i;
-                    var slides = document.getElementsByClassName("mySlides");
-                    var dots = document.getElementsByClassName("dot");
-                    if (n > slides.length) { slideIndex = 1 }
-                    if (n < 1) { slideIndex = slides.length }
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";
-                    }
-                    for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" active", "");
-                    }
-                    slides[slideIndex - 1].style.display = "block";
-                    dots[slideIndex - 1].className += " active";
-                }
-            </script>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <!--To Add: simply copy and paste, name slide to N + 1-->
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <!--Script for SlideShow-->
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
 
         <br>
         <br>
@@ -511,39 +526,41 @@
                         <th>Tools & Resources</th>
                     </tr>
                     <tr>
-                        <td><a href="">&#8594; About memoryexpress</a></td>
-                        <td><a href="">&#8594; Returns & Exchanges</a></td>
-                        <td><a href="">&#8594; System Configurator</a></td>
+                        <td><a title="Unavailable" href="">&#8594; About memoryexpress</a></td>
+                        <td><a title="Unavailable" href="">&#8594; Returns & Exchanges</a></td>
+                        <td><a title="Unavailable" href="">&#8594; System Configurator</a></td>
                     </tr>
                     <tr>
-                        <td><a href="">&#8594; Store Locatitons</a></td>
-                        <td><a href="">&#8594; Security & Privacy</a></td>
-                        <td><a href="">&#8594; Clearance Center</a></td>
+                        <td><a title="Unavailable" href="">&#8594; Store Locations</a></td>
+                        <td><a title="Unavailable" href="">&#8594; Security & Privacy</a></td>
+                        <td><a title="Unavailable" href="">&#8594; Clearance Center</a></td>
                     </tr>
                     <tr>
-                        <td><a href="">&#8594; Contact Us</a></td>
-                        <td><a href="">&#8594; Site Terms of Use</a></td>
-                        <td><a href="">&#8594; Rebate Center</a></td>
+                        <td><a title="Unavailable" href="">&#8594; Contact Us</a></td>
+                        <td><a title="Unavailable" href="">&#8594; Site Terms of Use</a></td>
+                        <td><a title="Unavailable" href="">&#8594; Rebate Center</a></td>
                     </tr>
                     <tr>
-                        <td><a href="">&#8594; Careers</a></td>
-                        <td><a href="">&#8594; Price Protection</a></td>
-                        <td><a href="">&#8594; New Arrivals</a></td>
+                        <td><a title="Unavailable" href="">&#8594; Careers</a></td>
+                        <td><a title="Unavailable" href="">&#8594; Price Protection</a></td>
+                        <td><a title="Unavailable" href="">&#8594; New Arrivals</a></td>
                     </tr>
                     <tr>
-                        <td><a href="">&#8594; FAQ</a></td>
-                        <td><a href="">&#8594; Warranties</a></td>
-                        <td><a href="">&#8594; Useful Links</a></td>
+                        <td><a title="Unavailable" href="">&#8594; FAQ</a></td>
+                        <td><a title="Unavailable" href="">&#8594; Warranties</a></td>
+                        <td><a title="Unavailable" href="">&#8594; Useful Links</a></td>
                     </tr>
                 </table>
             </div>
 
+            <!--I don't know what to call this, but it's there-->
             <p>Memory Express is not responsible for misprints or errors on product prices or information, for more
                 information please see our <a href="" class="FooterLink" title="Unavailable">Site Terms of Use</a>.
                 ©1996-2021 Memory Express, Inc. All Rights Reserved. -
                 W03
             </p>
 
+            <!--Social Media Links-->
             <div style="display: flex; width: 100%;">
                 <a href="https://www.youtube.com/user/MemoryExpress" class="fa fa-youtube"></a>
                 <a href="https://www.facebook.com/memoryexpress" class="fa fa-facebook"></a>

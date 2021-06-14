@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
+        /*
+            The reason .decorLine and .decorLine2 are not in main-style.scss:
+            I don't know how to apply one code to all divs in SCSS. I decided to simply add it as Internal so it get's applied easily to all eliments. 
+        */
         .decorLine {
             background-color: rgb(79, 185, 73);
             width: 100%;
@@ -81,6 +85,7 @@
 <body>
     <div class="TopHeader">
         <!--The top part of website stating: account information, items in cart and announcements-->
+        <!--Can't use code "ul" because it makes weird extra space and I don't know how to remove that.-->
         <div class="Account-Info">
             <!--Account Info-->
             <li style="padding-left: 25px;">Welcome
@@ -98,15 +103,16 @@
             <button onclick="openNav()">&#128489;</button>
 
             <li>|</li>
-            <li><a href="StoreLocations.html" class="login-links">Store Locatitons</a></li>
+            <li><a href="StoreLocations.html" class="login-links">Store Locations</a></li>
             <li class="gone">-</li>
-            <li><a href="" class="login-links">Contact Us</a></li>
+            <li><a href="" title="Unavailable" class="login-links">Contact Us</a></li>
             <li class="gone">-</li>
-            <li><a href="TechZone.html" class="login-links">Tech Zone</a></li>
+            <li><a href="" title="Unavailable" class="login-links">Tech Zone</a></li>
             <li class="gone">-</li>
             <li><a href="CorporateSales.html" class="login-links">Corporate Sales</a></li>
 
         </div>
+
         <!--Simple line for decor-->
         <div class="decorLine"></div>
     </div>
@@ -122,6 +128,7 @@
         <li>Sample Text</li>
     </div>
 
+    <!--Script for SideNav-->
     <script>
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
@@ -130,6 +137,7 @@
             document.getElementById("mySidenav").style.width = "0";
         }
     </script>
+
     <header>
         <!--Nav Bar-->
         <nav>
@@ -138,6 +146,7 @@
             <a href="index.html">&#8962;</a>
 
             <!--Dropdown menus-->
+            <!--Computer Hardware-->
             <div class="dropdown">
                 <button class="dropbtn">Computer Hardware</button>
                 <div class="dropdown-content">
@@ -147,6 +156,7 @@
                     <a href="" title="Unavailable">Storage Media</a>
                 </div>
             </div>
+            <!--Comtuper Systems-->
             <div class="dropdown">
                 <button class="dropbtn">Computer Systems</button>
                 <div class="dropdown-content">
@@ -159,6 +169,7 @@
 
                 </div>
             </div>
+            <!--Software & Gaming-->
             <div class="dropdown">
                 <button class="dropbtn">Software & Gaming</button>
                 <div class="dropdown-content">
@@ -166,6 +177,7 @@
                     <a href="" title="Unavailable">Gaming</a>
                 </div>
             </div>
+            <!--Networking-->
             <div class="dropdown">
                 <button class="dropbtn">Networking</button>
                 <div class="dropdown-content">
@@ -176,6 +188,7 @@
                     <a href="" title="Unavailable">Bluetooth Adapters</a>
                 </div>
             </div>
+            <!--TVs & Home Theater-->
             <div class="dropdown">
                 <button class="dropbtn">TVs & Home Theater</button>
                 <div class="dropdown-content">
@@ -184,6 +197,7 @@
                     <a href="" title="Unavailable">Video Output Devices</a>
                 </div>
             </div>
+            <!--Cameras & Camcorders-->
             <div class="dropdown">
                 <button class="dropbtn">Cameras & Camcorders</button>
                 <div class="dropdown-content">
@@ -193,6 +207,7 @@
                     <a href="" title="Unavailable">Surveillance</a>
                 </div>
             </div>
+            <!--More-->
             <div class="dropdown">
                 <button class="dropbtn">More</button>
                 <div class="dropdown-content">
@@ -312,39 +327,41 @@
                         <th>Tools & Resources</th>
                     </tr>
                     <tr>
-                        <td><a href="">&#8594; About memoryexpress</a></td>
-                        <td><a href="">&#8594; Returns & Exchanges</a></td>
-                        <td><a href="">&#8594; System Configurator</a></td>
+                        <td><a title="Unavailable" href="">&#8594; About memoryexpress</a></td>
+                        <td><a title="Unavailable" href="">&#8594; Returns & Exchanges</a></td>
+                        <td><a title="Unavailable" href="">&#8594; System Configurator</a></td>
                     </tr>
                     <tr>
-                        <td><a href="">&#8594; Store Locatitons</a></td>
-                        <td><a href="">&#8594; Security & Privacy</a></td>
-                        <td><a href="">&#8594; Clearance Center</a></td>
+                        <td><a title="Unavailable" href="">&#8594; Store Locations</a></td>
+                        <td><a title="Unavailable" href="">&#8594; Security & Privacy</a></td>
+                        <td><a title="Unavailable" href="">&#8594; Clearance Center</a></td>
                     </tr>
                     <tr>
-                        <td><a href="">&#8594; Contact Us</a></td>
-                        <td><a href="">&#8594; Site Terms of Use</a></td>
-                        <td><a href="">&#8594; Rebate Center</a></td>
+                        <td><a title="Unavailable" href="">&#8594; Contact Us</a></td>
+                        <td><a title="Unavailable" href="">&#8594; Site Terms of Use</a></td>
+                        <td><a title="Unavailable" href="">&#8594; Rebate Center</a></td>
                     </tr>
                     <tr>
-                        <td><a href="">&#8594; Careers</a></td>
-                        <td><a href="">&#8594; Price Protection</a></td>
-                        <td><a href="">&#8594; New Arrivals</a></td>
+                        <td><a title="Unavailable" href="">&#8594; Careers</a></td>
+                        <td><a title="Unavailable" href="">&#8594; Price Protection</a></td>
+                        <td><a title="Unavailable" href="">&#8594; New Arrivals</a></td>
                     </tr>
                     <tr>
-                        <td><a href="">&#8594; FAQ</a></td>
-                        <td><a href="">&#8594; Warranties</a></td>
-                        <td><a href="">&#8594; Useful Links</a></td>
+                        <td><a title="Unavailable" href="">&#8594; FAQ</a></td>
+                        <td><a title="Unavailable" href="">&#8594; Warranties</a></td>
+                        <td><a title="Unavailable" href="">&#8594; Useful Links</a></td>
                     </tr>
                 </table>
             </div>
 
+            <!--I don't know what to call this, but it's there-->
             <p>Memory Express is not responsible for misprints or errors on product prices or information, for more
                 information please see our <a href="" class="FooterLink" title="Unavailable">Site Terms of Use</a>.
                 ©1996-2021 Memory Express, Inc. All Rights Reserved. -
                 W03
             </p>
 
+            <!--Social Media Links-->
             <div style="display: flex; width: 100%;">
                 <a href="https://www.youtube.com/user/MemoryExpress" class="fa fa-youtube"></a>
                 <a href="https://www.facebook.com/memoryexpress" class="fa fa-facebook"></a>
