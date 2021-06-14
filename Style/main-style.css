@@ -441,6 +441,14 @@ footer {
   /* Instagram */
 }
 
+footer .FooterLink {
+  color: #fcf55f;
+}
+
+footer .FooterLink:hover {
+  color: #4fb949;
+}
+
 footer .footer1 {
   width: 100%;
   display: -webkit-box;
@@ -617,3 +625,4 @@ footer .fa-instagram {
     color: white;
   }
 }
+/*# sourceMappingURL=main-style.css.map */

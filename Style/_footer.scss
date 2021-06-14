@@ -7,6 +7,14 @@ footer {
     background-color: $gray-black;
     text-align: center;
 
+    .FooterLink{
+        color: $first-yellow;
+
+        &:hover{
+            color: $first-grn;
+        }
+    }
+
     .footer1 {
         width: 100%;
         display: flex;

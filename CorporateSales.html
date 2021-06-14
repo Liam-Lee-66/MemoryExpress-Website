@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>TechZone - A division of memoryexpress - Memory Express Inc.</title>
+    <title></title>
     <!--Style.scss-->
     <link rel="stylesheet" type="text/css" href="Style/main-style.css">
     <!-- Add icon library -->
@@ -22,62 +22,45 @@
             height: 5px;
         }
 
-        #intro h1,
-        p,
-        h2 {
-            color: black;
+        main {
             text-align: center;
         }
 
-        main #intro a {
-            color: rgb(79, 185, 73);
-        }
-
-        main #intro a:hover {
-            color: blue;
-        }
-
-        main #BigDivHolder {
+        .intro {
+            width: 100%;
             display: flex;
-            flex-direction: column;
-        }
-
-        main #BigDivHolder .ContentHolder {
-            width: 90%;
-            margin: auto;
-            background: none;
-            border: 4px solid rgb(51, 51, 51);
-            border-radius: 5px;
-            display: flex;
-        }
-
-        main #BigDivHolder .ContentHolder .Info {
-            background: none;
-            padding: 25px;
-            width: 70%;
-        }
-
-        main #BigDivHolder .ContentHolder .Price {
-            background-color: rgb(79, 185, 73);
-            padding: 15px;
-            width: 30%;
-            display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: center;
+            align-items: center;
         }
 
-        .Info h2,
-        .Ip {
-            color: black;
+        #TextDivL {
+            width: 30%;
             text-align: left;
         }
+        #TextDivR {
+            width: 25%;
+            text-align: right;
+        }
 
-        .Price h1 {
-            color: whitesmoke;
-            text-align: center;
+        #contacts{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .info{
+            width: 33%;
+            background-color: rgb(209, 240, 148);
+            color: black;
+            text-align: left;
+            padding: 15px;
+            margin: 15px;
+            border: 5px solid rgb(79, 185, 73);
+            border-radius: 4px;
         }
     </style>
-
 </head>
 
 <body>
@@ -104,7 +87,7 @@
             <li class="gone">-</li>
             <li><a href="" class="login-links">Contact Us</a></li>
             <li class="gone">-</li>
-            <li><a href="" class="login-links">Tech Zone</a></li>
+            <li><a href="TechZone.html" class="login-links">Tech Zone</a></li>
             <li class="gone">-</li>
             <li><a href="CorporateSales.html" class="login-links">Corporate Sales</a></li>
 
@@ -112,7 +95,6 @@
         <!--Simple line for decor-->
         <div class="decorLine"></div>
     </div>
-
 
     <!--Side menu for announcements/notifications-->
     <!--Side nav from W3schools: https://www.w3schools.com/howto/howto_js_sidenav.asp-->
@@ -213,143 +195,82 @@
     </header>
 
     <main>
-        <!--Image Header-->
-        <img src="Img/TechZone/TechZone-header.svg" alt="Image Header">
+        <img src="Img/CorporateSales/CorporateSales-header.svg" alt="Image header">
 
         <br>
         <br>
 
-        <div id="Intro">
-            <h1>Welcome to Tech Zone!</h1>
-            <p>TechZone is a division of memoryexpress specializing in computer and electronics repair. We offer a full
-                range of Repair & Diagnostic services in every memoryexpress retail store.</p>
+        <!--Intro Title-->
+        <h1>MemoryExpress Corporate Sales</h1>
+        <h3>for all your business IT needs.</h3>
 
-            <br>
+        <!--Intro Explaination-->
+        <div class="intro">
+            <div id="TextDivR">
+                <p>Regardless of the size of your business, the memoryexpress Corporate Sales team are here to
+                    ensure
+                    all
+                    your IT needs are met! From software licensing to enterprise-grade hardware, our experienced
+                    corporate
+                    sales team will help you find the best solutions to keep your business running smoothly.</p>
+            </div>
+            <div style="width: 25%;">
+                <img src="Img/CorporateSales/1007187-200.png" alt="image of handshake">
+            </div>
+        </div>
 
-            <h2>In Store Services</h2>
-            <p>In-Store Services are available at your local memoryexpress retail store. <a
-                    href="StoreLocations.html">Find a Location Near You!</a></p>
+        <!--Bit more info-->
+        <div class="intro">
+            <div style="width: 25%;">
+                <img src="Img/CorporateSales/5255d09ed4f8622b912661775f26bd58.png" alt="image of thumbsup" style="width: 70%; border-radius: 10px; margin: 10px;">
+            </div>
+            <!--Simply spacing out-->
+            <div style="width: 5%;"></div>
+            <div id="TextDivL">
+                <li>Dedicated sales and support staff to meet your IT needs</li>
+                <li>Access to thousands of additional products including software licensing, enterprise grade hardware and more</li>
+                <li>Access to institutional and educational pricing</li>
+                <li>Access to credit terms and additional payment options</li>
+                <li>Various options to enhance or extend your warranty coverage with IPR, warranty and support plans</li>
+            </div>
         </div>
 
         <br>
         <br>
+
+        <!--Contacts Title-->
+        <h1 style="color: rgb(79, 185, 73);">Contact a Corporate Sales Representative and start benefiting today!</h1>
+    
+        <br>
         <br>
 
-        <div id="BigDivHolder">
+        <!--Contact Info-->
+        <div id="contacts">
+            <!--Vancouver-->
+            <div class="info">
+                <h2>Vancouver</h2>
+                <div style="width: 100%; height: 2px; background-color: black;"></div>
 
-            <!--Quickmount info-->
-            <div class="ContentHolder">
-                <div class="Info">
-                    <h2>Quickmount</h2>
-                    <p class="Ip">When you purchase a CPU & Motherboard at memoryexpress our TechZone Technicians will
-                        install
-                        the CPU on the Motherboard, Update the BIOS, Post-check the board... and if you purchase new
-                        memory we will also install that too!</p>
-                </div>
-                <div class="Price">
-                    <h1>Free</h1>
-                    <p style="color: whitesmoke;">(Labour Only)<br>With Purchase of CPU & Motherboard</p>
-                </div>
             </div>
-
-            <br>
-            <br>
-
-            <!--Memory (RAM) Installation info-->
-            <div class="ContentHolder">
-                <div class="Info">
-                    <h2>Memory (RAM) Installation</h2>
-                    <p class="Ip">Purchase additional or replacement memory for your Laptop or Desktop and let our
-                        TechZone Technicians install and test it for $15 - $50.</p>
-                    <p class="Ip">(Labour Only. Installation fee may vary based on model.)</p>
-                </div>
-                <div class="Price">
-                    <h1>$15 - $50</h1>
-                    <p style="color: whitesmoke;">(Labour Only)<br>Varies based on model</p>
-                </div>
+            <div class="info">
+                <h2>Vancouver</h2>
+                <div style="width: 100%; height: 2px; background-color: black;"></div>
+                
             </div>
-
-            <br>
-            <br>
-
-            <!--Standard In-Store Service info-->
-            <div class="ContentHolder">
-                <div class="Info">
-                    <h2>Standard In-Store Service</h2>
-                    <p class="Ip">Our TechZone Technicians can fix almost any Laptop or Desktop computer. We offer;
-                        Virus Removal, Operating System Reload/Restore, Hardware Upgrades, LCD Panel Replacement, and
-                        more...</p>
-                    <p class="Ip">(Billable in 30 min increments, after 1 (one) hour minimum)</p>
-                </div>
-                <div class="Price">
-                    <h1>$50</h1>
-                    <p style="color: whitesmoke;">Per Hour<br>(Labour Only)</p>
-                </div>
+            <div class="info">
+                <h2>Vancouver</h2>
+                <div style="width: 100%; height: 2px; background-color: black;"></div>
+                
             </div>
-
-            <br>
-            <br>
-
-            <!--Priority In-Store Service info-->
-            <div class="ContentHolder">
-                <div class="Info">
-                    <h2>Priority In-Store Service</h2>
-                    <p class="Ip">Priority Service is the same as Standard Service but will get moved to the front of
-                        the service queue.</p>
-                    <p class="Ip">(Billable in 1 (one) hour increments)</p>
-                </div>
-                <div class="Price">
-                    <h1>$75</h1>
-                    <p style="color: whitesmoke;">Per Hour<br>(Labour Only)</p>
-                </div>
+            <div class="info">
+                <h2>Vancouver</h2>
+                <div style="width: 100%; height: 2px; background-color: black;"></div>
+                
             </div>
-
-            <br>
-            <br>
-
-            <!--Custom System Build - Standard info-->
-            <div class="ContentHolder">
-                <div class="Info">
-                    <h2>Custom System Build - Standard</h2>
-                    <p class="Ip">Get the perfect system with no compromises when you visit a memoryexpress Sales
-                        Professional in-store and get a custom system built to order, or configure it yourself with our
-                        System Configurator! You choose and pay for the parts/software and we'll build it and install
-                        the OS (Operating System) for $75. ($50 with no OS)</p>
-                </div>
-                <div class="Price">
-                    <h1>$50 / $75</h1>
-                    <p style="color: whitesmoke;">Without OS / With OS<br>Flat Rate<br>(Labour Only)</p>
-                </div>
-            </div>
-
-            <br>
-            <br>
-
-            <!--Custom System Build - Premium info-->
-            <div class="ContentHolder">
-                <div class="Info">
-                    <h2>Custom System Build - Premium</h2>
-                    <p class="Ip">Our premium hardware assembly option includes all the same care and rigourous testing
-                        as our standard assembly option but also includes work needed for complex & specialty builds.
-                    </p>
-                    <p class="Ip">This include 3rd party coolers, liquid cooling, custom lighting, fan and/or lighting
-                        controller installation, multiple drives / RAID configuration, multi-gpu configuration (SLI /
-                        Crossfire), and any cases that require more than routine assembly.</p>
-                    <p class="Ip">You choose and pay for the parts/software and we'll build it and install the OS
-                        (Operating System) for $100. ($75 with no OS)</p>
-                </div>
-                <div class="Price">
-                    <h1>$75 / $100</h1>
-                    <p style="color: whitesmoke;">Without OS / With OS<br>Flat Rate<br>(Labour Only)</p>
-                </div>
-            </div>
+            
         </div>
+    
     </main>
-
-    <br>
-    <br>
-    <br>    
-    <br>
 
     <!--Simple line for decor-->
     <div class="decorLine2"></div>
@@ -408,6 +329,7 @@
             </div>
         </footer>
     </div>
+
 </body>
 
 </html>
