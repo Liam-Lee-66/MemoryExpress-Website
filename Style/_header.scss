@@ -1,3 +1,5 @@
+
+/*Top part of website*/
 .TopHeader {
     font-family: Georgia, "Times New Roman", Times, serif;
     background-color: $gray-black;
@@ -28,6 +30,7 @@
 }
 /*
     Side nav from W3schools: https://www.w3schools.com/howto/howto_js_sidenav.asp
+    Side nav appears when button next to "Announcements" is clicked.
 */
 .sidenav {
     height: 100%;
@@ -54,14 +57,25 @@
         }
     }
     li {
-        padding: 8px 8px 8px 32px;
+        font-family: sans-serif;
+        padding: 0px 8px 8px 32px;
         text-decoration: none;
         font-size: 18px;
         color: whitesmoke;
         display: block;
         transition: 0.3s;
     }
+    h1 {
+        font-family: serif;
+        padding: 8px 8px 0px 32px;
+        text-decoration: none;
+        font-size: 24px;
+        color: whitesmoke;
+        display: block;
+        transition: 0.3s;
+    }
 }
+/*Close button for Sidenav*/
 .sidenav .closebtn {
     position: absolute;
     top: 0;
@@ -69,6 +83,7 @@
     font-size: 36px;
     margin-left: 50px;
 }
+
 
 header {
     font-family: Arial, Helvetica, sans-serif;
@@ -184,7 +199,11 @@ header {
     }
 }
 
-/*Mobile Version*/
+/*
+    Mobile Version
+    -   Remove "-" signs in Top header
+    -   Text align center for Top header 
+*/
 @media all and (max-width: 750px) {
     .TopHeader {
         text-align: center;

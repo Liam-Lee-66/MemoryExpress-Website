@@ -1,9 +1,11 @@
+/*Removing weird space when I set any div to "Width: 100%*/
 html,
 body {
   height: 100%;
   margin: 0;
 }
 
+/*Gradient(?) Background*/
 body {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#d1f094), to(white));
   background-image: linear-gradient(#d1f094, white);
@@ -18,6 +20,7 @@ a {
 }
 
 /*importing content from "header.scss"*/
+/*Top part of website*/
 .TopHeader {
   font-family: Georgia, "Times New Roman", Times, serif;
   background-color: #333333;
@@ -50,6 +53,7 @@ a {
 
 /*
     Side nav from W3schools: https://www.w3schools.com/howto/howto_js_sidenav.asp
+    Side nav appears when button next to "Announcements" is clicked.
 */
 .sidenav {
   height: 100%;
@@ -80,7 +84,8 @@ a {
 }
 
 .sidenav li {
-  padding: 8px 8px 8px 32px;
+  font-family: sans-serif;
+  padding: 0px 8px 8px 32px;
   text-decoration: none;
   font-size: 18px;
   color: whitesmoke;
@@ -89,6 +94,18 @@ a {
   transition: 0.3s;
 }
 
+.sidenav h1 {
+  font-family: serif;
+  padding: 8px 8px 0px 32px;
+  text-decoration: none;
+  font-size: 24px;
+  color: whitesmoke;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/*Close button for Sidenav*/
 .sidenav .closebtn {
   position: absolute;
   top: 0;
@@ -225,7 +242,11 @@ header nav .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/*Mobile Version*/
+/*
+    Mobile Version
+    -   Remove "-" signs in Top header
+    -   Text align center for Top header 
+*/
 @media all and (max-width: 750px) {
   .TopHeader {
     text-align: center;
@@ -417,6 +438,7 @@ header nav .dropdown:hover .dropdown-content {
     This guy in the internet fixed my footer problem. (where it overlapped the content and stay there)
     https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/
 */
+/*Main changing font*/
 main {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -435,6 +457,7 @@ footer {
   height: 25%;
   background-color: #333333;
   text-align: center;
+  /*Social Media links styling*/
   /* Facebook */
   /* Twitter */
   /* Youtube */
@@ -534,6 +557,10 @@ footer .fa-instagram {
   color: white;
 }
 
+/*
+    Mobile version
+    -   Reduce font size of content in Footer
+*/
 @media all and (max-width: 750px) {
   footer {
     display: -webkit-box;

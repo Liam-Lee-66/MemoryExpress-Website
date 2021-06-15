@@ -1,10 +1,13 @@
 @import "colours";
 
+/*Removing weird space when I set any div to "Width: 100%*/
 html,
 body {
     height: 100%;
     margin: 0;
 }
+
+/*Gradient(?) Background*/
 body {
     background-image: linear-gradient($third-grn, white);
     background-repeat: no-repeat;
@@ -23,6 +26,8 @@ a {
     This guy in the internet fixed my footer problem. (where it overlapped the content and stay there)
     https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/
 */
+
+/*Main changing font*/
 main {   
     font-family: Arial, Helvetica, sans-serif;   
 }
